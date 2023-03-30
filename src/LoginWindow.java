@@ -1,3 +1,5 @@
+import Administrator.AdministratorMain;
+
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
@@ -27,8 +29,15 @@ public class LoginWindow extends JFrame {
         LoginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                SecondOne secondOne = new SecondOne();
-                secondOne.setVisible(true);
+                AdministratorMain administratorMain = new AdministratorMain();
+                administratorMain.setVisible(true);
+                dispose();
+            }
+        });
+
+        ExitButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
                 dispose();
             }
         });
@@ -39,7 +48,7 @@ public class LoginWindow extends JFrame {
         loginWindow.setVisible(true);
         loginWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         loginWindow.setSize(1000,800);
-        loginWindow.setTitle("V");
+        loginWindow.setTitle("Vexic");
         loginWindow.setContentPane(loginWindow.loginPanel);
         loginWindow.setLocationRelativeTo(null);
     }
