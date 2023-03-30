@@ -1,27 +1,46 @@
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class LoginWindow extends JFrame {
     private JButton ExitButton;
-    private JButton LoginButton;
-    private JTextField UserTextField;
-    private JLabel PasswordLabel;
-    private JLabel UserLabel;
+    private JPanel loginPanel;
     private JTextField textField1;
-    private JPanel mainPanel;
+    private JPasswordField passwordField1;
+    private JButton LoginButton;
+    private JLabel TeamLogo;
+    private JLabel UsernameLabel;
+    private JLabel PasswordLabel;
 
     public LoginWindow() {
-        setContentPane(mainPanel);
-        setTitle("Vexic");
-        setSize(600,500);
-        mainPanel.setBackground(Color.GREEN);
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        setVisible(true);
+
+        ImageIcon originalIcon = new ImageIcon("Images/TeamLogo.png");
+        Image originalImage = originalIcon.getImage();
+        Image scaledImage = originalImage.getScaledInstance(200, -1, Image.SCALE_SMOOTH);
+        ImageIcon scaledIcon = new ImageIcon(scaledImage);
+        TeamLogo.setIcon(scaledIcon);
+        TeamLogo.setSize(100, 100);
+        TeamLogo.setBorder(new EmptyBorder(40, 40, 40, 80));
+
+        LoginButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                SecondOne secondOne = new SecondOne();
+                secondOne.setVisible(true);
+                dispose();
+            }
+        });
     }
 
-
-
     public static void main(String[] args) {
-        LoginWindow myFrame = new LoginWindow();
+        LoginWindow loginWindow = new LoginWindow();
+        loginWindow.setVisible(true);
+        loginWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        loginWindow.setSize(1000,800);
+        loginWindow.setTitle("V");
+        loginWindow.setContentPane(loginWindow.loginPanel);
+        loginWindow.setLocationRelativeTo(null);
     }
 }
