@@ -1,27 +1,28 @@
-package TravelAdvisor.GenerateReports;
+package TravelAdvisor.MaintainCustomers;
 
-import Manager.MainPage.ManagerMain;
 import TravelAdvisor.MainPage.TravelAdvisorMain;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class TravelAdvisorGenerateReport extends JFrame {
+public class TravelAdvisorMaintainCustomers extends JFrame {
 
-    private JPanel traveladvisorgeneratereportPanel;
-    private JButton generateTicketStockTurnoverButton;
-    private JButton generateDomesticReportButton;
-    private JButton generateInternationalReportButton;
+    private JPanel traveladvisormaintaincustomerPanel;
+    private JButton createNewButton;
+    private JTextField textField1;
+    private JButton editButton;
+    private JButton deleteButton;
     private JButton logoutButton;
     private JButton backButton;
+    private JButton saveButton;
 
-    public TravelAdvisorGenerateReport() {
-        //Allows the Travel Advisor Generate Report Page
+    public TravelAdvisorMaintainCustomers() {
+        //Displays the Travel Advisor Maintain Customer page
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(1000,800);
-        this.setTitle("Travel Advisor Generate Report");
-        this.setContentPane(traveladvisorgeneratereportPanel);
+        this.setTitle("Travel Advisor Maintain Customer");
+        this.setContentPane(traveladvisormaintaincustomerPanel);
         this.setLocationRelativeTo(null);
 
         backButton.addActionListener(new ActionListener() {
@@ -42,5 +43,4 @@ public class TravelAdvisorGenerateReport extends JFrame {
             }
         });
     }
-
 }

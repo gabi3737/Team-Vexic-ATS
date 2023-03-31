@@ -1,6 +1,7 @@
 package TravelAdvisor.MainPage;
 
 import TravelAdvisor.GenerateReports.TravelAdvisorGenerateReport;
+import TravelAdvisor.MaintainCustomers.TravelAdvisorMaintainCustomers;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -19,7 +20,7 @@ public class TravelAdvisorMain extends JFrame {
         //Allows the Travel Advisor Main page to be shown
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(1000,800);
-        this.setTitle("Manager");
+        this.setTitle("Travel Advisor");
         this.setContentPane(traveladvisormainPanel);
         this.setLocationRelativeTo(null);
 
@@ -28,6 +29,22 @@ public class TravelAdvisorMain extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 TravelAdvisorGenerateReport travelAdvisorGenerateReport = new TravelAdvisorGenerateReport();
                 travelAdvisorGenerateReport.setVisible(true);
+                dispose();
+            }
+        });
+
+        maintainCustomersButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                TravelAdvisorMaintainCustomers travelAdvisorMaintainCustomers = new TravelAdvisorMaintainCustomers();
+                travelAdvisorMaintainCustomers.setVisible(true);
+                dispose();
+            }
+        });
+
+        logoutButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
                 dispose();
             }
         });
