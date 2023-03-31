@@ -1,48 +1,55 @@
+import Administrator.MainPage.AdministratorMain;
+
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class LoginWindow {
+public class LoginWindow extends JFrame {
+    private JButton ExitButton;
+    private JPanel loginPanel;
+    private JTextField textField1;
+    private JPasswordField passwordField1;
+    private JButton LoginButton;
+    private JLabel TeamLogo;
+    private JLabel UsernameLabel;
+    private JLabel PasswordLabel;
+
+    public LoginWindow() {
+
+        ImageIcon originalIcon = new ImageIcon("Images/AppLogo2.png");
+        Image originalImage = originalIcon.getImage();
+        Image scaledImage = originalImage.getScaledInstance(200, -1, Image.SCALE_SMOOTH);
+        ImageIcon scaledIcon = new ImageIcon(scaledImage);
+        TeamLogo.setIcon(scaledIcon);
+        TeamLogo.setSize(100, 100);
+        TeamLogo.setBorder(new EmptyBorder(40, 40, 40, 80));
+
+        LoginButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                AdministratorMain administratorMain = new AdministratorMain();
+                administratorMain.setVisible(true);
+                dispose();
+            }
+        });
+
+        ExitButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+            }
+        });
+    }
+
     public static void main(String[] args) {
-        //We have created an JFrame object
-        JFrame frame = new JFrame("Login Window");
-
-        //We have adjusted the FlowLayout
-        frame.setLayout(new FlowLayout());
-
-        //We have created the JLabel object
-        JLabel userLabel = new JLabel("Username:");
-        JLabel passLabel = new JLabel("Password:");
-
-        //We have created the JTextField objects
-        JTextField userField = new JTextField(20);
-        JTextField passField = new JTextField(20);
-
-        //This is the ok button
-        JButton okButton = new JButton("OK");
-
-        //We have created the JPanel object
-        JPanel panel = new JPanel();
-
-        //Assembled all the components into the panel
-        panel.add(userLabel);
-        panel.add(userField);
-        panel.add(passLabel);
-        panel.add(passField);
-        panel.add(okButton);
-
-        //serLabel.setLocation(5, 5);
-        //.setLocation(250,250);
-        //okButton.setLocation(100,100);
-        //insert the panel in our frame
-        frame.add(panel);
-
-        //frame size
-        frame.setSize(1000, 800);
-
-        //frame close operation
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-        //make frame visible
-        frame.setVisible(true);
+        LoginWindow loginWindow = new LoginWindow();
+        loginWindow.setVisible(true);
+        loginWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        loginWindow.setSize(1000,800);
+        loginWindow.setTitle("Vexic");
+        loginWindow.setContentPane(loginWindow.loginPanel);
+        loginWindow.setLocationRelativeTo(null);
     }
 }
