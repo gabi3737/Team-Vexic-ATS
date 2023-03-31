@@ -18,7 +18,7 @@ public class LoginWindow extends JFrame {
 
     public LoginWindow() {
 
-        ImageIcon originalIcon = new ImageIcon("Images/TeamLogo.png");
+        ImageIcon originalIcon = new ImageIcon("Images/AppLogo2.png");
         Image originalImage = originalIcon.getImage();
         Image scaledImage = originalImage.getScaledInstance(200, -1, Image.SCALE_SMOOTH);
         ImageIcon scaledIcon = new ImageIcon(scaledImage);
