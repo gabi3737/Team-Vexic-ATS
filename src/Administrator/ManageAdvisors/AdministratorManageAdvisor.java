@@ -22,7 +22,7 @@ public class AdministratorManageAdvisor extends JFrame {
         //Displays the First Administrator page
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(1000,800);
-        this.setTitle("Administrator");
+        this.setTitle("Manage Advisors");
         this.setContentPane(administratormanageadvisorsPanel);
         this.setLocationRelativeTo(null);
 
@@ -31,6 +31,15 @@ public class AdministratorManageAdvisor extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 ManageAdvisorAddNew manageAdvisorAddNew = new ManageAdvisorAddNew();
                 manageAdvisorAddNew.setVisible(true);
+                dispose();
+            }
+        });
+
+        editButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ManageAdvisorEdit manageAdvisorEdit = new ManageAdvisorEdit();
+                manageAdvisorEdit.setVisible(true);
                 dispose();
             }
         });
