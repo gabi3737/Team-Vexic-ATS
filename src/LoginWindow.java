@@ -1,3 +1,4 @@
+import Administrator.MainPage.AdministratorMain;
 import Manager.MainPage.ManagerMain;
 
 import javax.swing.*;
@@ -15,6 +16,8 @@ public class LoginWindow extends JFrame {
     private JLabel TeamLogo;
     private JLabel UsernameLabel;
     private JLabel PasswordLabel;
+    private JButton administratorButtonTestButton;
+    private JButton managerButtonTestButton;
 
     public LoginWindow() {
 
@@ -33,6 +36,24 @@ public class LoginWindow extends JFrame {
                 //administratorMain.setVisible(true);
                 //dispose();
 
+                //ManagerMain managerMain = new ManagerMain();
+                //managerMain.setVisible(true);
+                //dispose();
+            }
+        });
+
+        administratorButtonTestButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                AdministratorMain administratorMain = new AdministratorMain();
+                administratorMain.setVisible(true);
+                dispose();
+            }
+        });
+
+        managerButtonTestButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
                 ManagerMain managerMain = new ManagerMain();
                 managerMain.setVisible(true);
                 dispose();

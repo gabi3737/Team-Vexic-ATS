@@ -1,26 +1,27 @@
-package Manager.GenerateReports;
+package Manager.AssignBlank;
 
-import Administrator.ManageAdvisors.AdministratorManageAdvisor;
 import Manager.MainPage.ManagerMain;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class ManagerGenerateReport extends JFrame {
+public class ManagerAssignBlank extends JFrame {
 
-    private JPanel managergeneratereportPanel;
-    private JButton generateGlobalDomesticSalesButton;
-    private JButton generateGlobalInterlinesSalesButton;
+    private JPanel managerassignblankPanel;
+    private JTextField textField1;
+    private JTextField textField2;
+    private JComboBox comboBox1;
     private JButton logoutButton;
     private JButton backButton;
+    private JButton saveButton;
 
-    public ManagerGenerateReport() {
-        //Displays the Generate Reports page from Manager
+    public ManagerAssignBlank() {
+        //Displays the Assign Blank Page
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(1000,800);
-        this.setTitle("Manager Generate Reports");
-        this.setContentPane(managergeneratereportPanel);
+        this.setTitle("Manager Assign Blank");
+        this.setContentPane(managerassignblankPanel);
         this.setLocationRelativeTo(null);
 
         backButton.addActionListener(new ActionListener() {
@@ -40,7 +41,6 @@ public class ManagerGenerateReport extends JFrame {
                 dispose();
             }
         });
-
 
     }
 }

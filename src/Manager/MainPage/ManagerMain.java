@@ -1,6 +1,8 @@
 package Manager.MainPage;
 
+import Manager.AssignBlank.ManagerAssignBlank;
 import Manager.GenerateReports.ManagerGenerateReport;
+import Manager.SetDiscountPlan.ManagerSetDiscountPlan;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -18,15 +20,42 @@ public class ManagerMain extends JFrame {
         //Displays the main page of Manager
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(1000,800);
-        this.setTitle("Administrator");
+        this.setTitle("Manager");
         this.setContentPane(managermainPanel);
         this.setLocationRelativeTo(null);
 
         generateReportsButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //When button is pressed the Manager is taken to the Generate Report page
                 ManagerGenerateReport managerGenerateReport = new ManagerGenerateReport();
                 managerGenerateReport.setVisible(true);
+                dispose();
+            }
+        });
+
+        assignBlankButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ManagerAssignBlank managerAssignBlank = new ManagerAssignBlank();
+                managerAssignBlank.setVisible(true);
+                dispose();
+            }
+        });
+
+        setDiscountPlanButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ManagerSetDiscountPlan managerSetDiscountPlan = new ManagerSetDiscountPlan();
+                managerSetDiscountPlan.setVisible(true);
+                dispose();
+            }
+        });
+
+        logoutButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //Closes the software when pressed
                 dispose();
             }
         });

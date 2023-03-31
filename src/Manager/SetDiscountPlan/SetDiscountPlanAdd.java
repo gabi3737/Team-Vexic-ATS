@@ -1,35 +1,34 @@
-package Manager.GenerateReports;
-
-import Administrator.ManageAdvisors.AdministratorManageAdvisor;
-import Manager.MainPage.ManagerMain;
+package Manager.SetDiscountPlan;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class ManagerGenerateReport extends JFrame {
+public class SetDiscountPlanAdd extends JFrame {
 
-    private JPanel managergeneratereportPanel;
-    private JButton generateGlobalDomesticSalesButton;
-    private JButton generateGlobalInterlinesSalesButton;
+    private JPanel setdiscountplanaddPanel;
+    private JComboBox comboBox1;
+    private JTextField textField1;
     private JButton logoutButton;
     private JButton backButton;
+    private JButton saveButton;
 
-    public ManagerGenerateReport() {
-        //Displays the Generate Reports page from Manager
+    public SetDiscountPlanAdd() {
+        //Displays the Set Discount Plan Add page for Manager
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(1000,800);
-        this.setTitle("Manager Generate Reports");
-        this.setContentPane(managergeneratereportPanel);
+        this.setTitle("Manager Set Discount Plan Edit");
+        this.setContentPane(setdiscountplanaddPanel);
         this.setLocationRelativeTo(null);
 
         backButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //when pressed user is taken back to main manager page
+                //when pressed user the user is taken back to Set Discount Plan Manager page
                 dispose();
-                ManagerMain managerMain = new ManagerMain();
-                managerMain.setVisible(true);
+                ManagerSetDiscountPlan managerSetDiscountPlan = new ManagerSetDiscountPlan();
+                managerSetDiscountPlan.setVisible(true);
+                dispose();
             }
         });
 
@@ -40,7 +39,6 @@ public class ManagerGenerateReport extends JFrame {
                 dispose();
             }
         });
-
-
     }
+
 }
