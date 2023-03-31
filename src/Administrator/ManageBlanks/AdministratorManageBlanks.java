@@ -44,6 +44,16 @@ public class AdministratorManageBlanks extends JFrame {
             }
         });
 
+        updateBlankStatusButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ManageUpdateBlankStatus manageUpdateBlankStatus = new ManageUpdateBlankStatus();
+                manageUpdateBlankStatus.setVisible(true);
+                dispose();
+            }
+        });
+
+
         backButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

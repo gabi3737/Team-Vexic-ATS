@@ -2,6 +2,7 @@ package Administrator.MainPage;
 
 import Administrator.ManageAdvisors.AdministratorManageAdvisor;
 import Administrator.ManageBlanks.AdministratorManageBlanks;
+import Administrator.ManageCommission.AdministratorManageCommission;
 import Administrator.ManageDatabase.AdministratorManageDatabase;
 
 import javax.swing.*;
@@ -53,6 +54,15 @@ public class AdministratorMain extends JFrame {
                 administratorManageBlanks.setVisible(true);
                 dispose();
 
+            }
+        });
+
+        manageCommissionsButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                AdministratorManageCommission administratorManageCommission = new AdministratorManageCommission();
+                administratorManageCommission.setVisible(true);
+                dispose();
             }
         });
 
