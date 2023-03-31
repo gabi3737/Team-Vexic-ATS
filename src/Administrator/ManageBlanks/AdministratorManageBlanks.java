@@ -35,6 +35,15 @@ public class AdministratorManageBlanks extends JFrame {
             }
         });
 
+        orderBlanksButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ManageBlankOrder manageBlankOrder = new ManageBlankOrder();
+                manageBlankOrder.setVisible(true);
+                dispose();
+            }
+        });
+
         backButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
