@@ -1,4 +1,4 @@
-import Administrator.MainPage.AdministratorMain;
+import Manager.MainPage.ManagerMain;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -29,8 +29,12 @@ public class LoginWindow extends JFrame {
         LoginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                AdministratorMain administratorMain = new AdministratorMain();
-                administratorMain.setVisible(true);
+                //AdministratorMain administratorMain = new AdministratorMain();
+                //administratorMain.setVisible(true);
+                //dispose();
+
+                ManagerMain managerMain = new ManagerMain();
+                managerMain.setVisible(true);
                 dispose();
             }
         });
