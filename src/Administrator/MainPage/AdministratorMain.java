@@ -1,4 +1,7 @@
-package Administrator;
+package Administrator.MainPage;
+
+import Administrator.ManageAdvisors.AdministratorManageAdvisor;
+import Administrator.ManageDatabase.AdministratorManageDatabase;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -15,6 +18,7 @@ public class AdministratorMain extends JFrame {
     private JButton logoutButton;
 
     public AdministratorMain() {
+        //Displays the First Administrator page
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(1000,800);
         this.setTitle("Administrator");
@@ -24,8 +28,19 @@ public class AdministratorMain extends JFrame {
         manageDatabaseButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //Displays ManageDatabase page when pressed
                 AdministratorManageDatabase administratorManageDatabase = new AdministratorManageDatabase();
                 administratorManageDatabase.setVisible(true);
+                dispose();
+            }
+        });
+
+        manageAdvisorsButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //Displays ManageAdvisors page when pressed
+                AdministratorManageAdvisor administratorManageAdvisors = new AdministratorManageAdvisor();
+                administratorManageAdvisors.setVisible(true);
                 dispose();
             }
         });

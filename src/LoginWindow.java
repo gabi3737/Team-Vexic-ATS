@@ -1,4 +1,4 @@
-import Administrator.AdministratorMain;
+import Administrator.MainPage.AdministratorMain;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
