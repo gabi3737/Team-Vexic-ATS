@@ -1,29 +1,29 @@
-package TravelAdvisor.MaintainCustomers;
+package TravelAdvisor.SellTicket;
 
 import TravelAdvisor.MainPage.TravelAdvisorMain;
+import TravelAdvisor.MaintainCustomers.TravelAdvisorMaintainCustomers;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class MaintainCustomerCreateNew extends JFrame {
+public class TravelAdvisorSellTicket extends JFrame {
 
-    private JPanel maintaincustomercreatenewPanel;
+    private JPanel traveladvisorsellticketPanel;
     private JTextField textField1;
-    private JTextField textField2;
-    private JTextField textField3;
     private JComboBox comboBox1;
-    private JComboBox comboBox2;
+    private JTextField textField2;
     private JButton backButton;
-    private JButton saveButton;
     private JButton logoutButton;
+    private JButton saveButton;
+    private JTable table1;
 
-    public MaintainCustomerCreateNew() {
-        //Displays the Travel Advisor Maintain Customer Create New page
+    public TravelAdvisorSellTicket() {
+        //Displays the Travel Advisor Sell Ticket page
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(1000,800);
-        this.setTitle("Travel Advisor Maintain Customer Create New");
-        this.setContentPane(maintaincustomercreatenewPanel);
+        this.setTitle("Travel Advisor Sell Ticket");
+        this.setContentPane(traveladvisorsellticketPanel);
         this.setLocationRelativeTo(null);
 
         backButton.addActionListener(new ActionListener() {
@@ -31,9 +31,8 @@ public class MaintainCustomerCreateNew extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 //when pressed user is taken back to main manager page
                 dispose();
-                TravelAdvisorMaintainCustomers travelAdvisorMaintainCustomers = new TravelAdvisorMaintainCustomers();
-                travelAdvisorMaintainCustomers.setVisible(true);
-                dispose();
+                TravelAdvisorMain travelAdvisorMain = new TravelAdvisorMain();
+                travelAdvisorMain.setVisible(true);
             }
         });
 

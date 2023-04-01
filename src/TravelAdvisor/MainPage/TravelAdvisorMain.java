@@ -1,7 +1,9 @@
 package TravelAdvisor.MainPage;
 
 import TravelAdvisor.GenerateReports.TravelAdvisorGenerateReport;
+import TravelAdvisor.IssueRefund.TravelAdvisorIssueRefund;
 import TravelAdvisor.MaintainCustomers.TravelAdvisorMaintainCustomers;
+import TravelAdvisor.SellTicket.TravelAdvisorSellTicket;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -38,6 +40,24 @@ public class TravelAdvisorMain extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 TravelAdvisorMaintainCustomers travelAdvisorMaintainCustomers = new TravelAdvisorMaintainCustomers();
                 travelAdvisorMaintainCustomers.setVisible(true);
+                dispose();
+            }
+        });
+
+        sellTicketButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                TravelAdvisorSellTicket travelAdvisorSellTicket = new TravelAdvisorSellTicket();
+                travelAdvisorSellTicket.setVisible(true);
+                dispose();
+            }
+        });
+
+        issueRefundButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                TravelAdvisorIssueRefund travelAdvisorIssueRefund = new TravelAdvisorIssueRefund();
+                travelAdvisorIssueRefund.setVisible(true);
                 dispose();
             }
         });

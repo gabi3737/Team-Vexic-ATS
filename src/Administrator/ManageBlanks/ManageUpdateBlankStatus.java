@@ -17,7 +17,7 @@ public class ManageUpdateBlankStatus extends JFrame {
         //Displays the Manage Update Blank Status page
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(1000, 800);
-        this.setTitle("Manage Blanks");
+        this.setTitle("Manage Blanks Update Blank Status");
         this.setContentPane(updateBlankStatus);
         this.setLocationRelativeTo(null);
 

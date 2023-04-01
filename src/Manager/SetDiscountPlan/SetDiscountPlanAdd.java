@@ -17,7 +17,7 @@ public class SetDiscountPlanAdd extends JFrame {
         //Displays the Set Discount Plan Add page for Manager
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(1000,800);
-        this.setTitle("Manager Set Discount Plan Edit");
+        this.setTitle("Manager Set Discount Plan Add");
         this.setContentPane(setdiscountplanaddPanel);
         this.setLocationRelativeTo(null);
 
@@ -28,7 +28,7 @@ public class SetDiscountPlanAdd extends JFrame {
                 dispose();
                 ManagerSetDiscountPlan managerSetDiscountPlan = new ManagerSetDiscountPlan();
                 managerSetDiscountPlan.setVisible(true);
-                dispose();
+
             }
         });
 

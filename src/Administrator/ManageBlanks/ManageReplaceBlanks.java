@@ -22,7 +22,7 @@ public class ManageReplaceBlanks extends JFrame {
         //Displays the Manage Replace blanks main page
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(1000, 800);
-        this.setTitle("Manage Advisors");
+        this.setTitle("Manage Blanks Replace Blanks");
         this.setContentPane(replaceblanksPanel);
         this.setLocationRelativeTo(null);
 

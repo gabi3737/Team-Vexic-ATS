@@ -38,6 +38,15 @@ public class ManagerSetDiscountPlan extends JFrame {
             }
         });
 
+        backButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //when pressed user the user is taken back to Set Discount Plan Manager page
+                dispose();
+                ManagerSetDiscountPlan managerSetDiscountPlan = new ManagerSetDiscountPlan();
+                managerSetDiscountPlan.setVisible(true);
+            }
+        });
         logoutButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

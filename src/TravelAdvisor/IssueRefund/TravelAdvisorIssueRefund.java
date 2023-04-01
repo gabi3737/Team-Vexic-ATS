@@ -1,4 +1,4 @@
-package TravelAdvisor.MaintainCustomers;
+package TravelAdvisor.IssueRefund;
 
 import TravelAdvisor.MainPage.TravelAdvisorMain;
 
@@ -6,24 +6,22 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class MaintainCustomerCreateNew extends JFrame {
+public class TravelAdvisorIssueRefund extends JFrame {
 
-    private JPanel maintaincustomercreatenewPanel;
+    private JPanel traveladvisorissuerefundPanel;
     private JTextField textField1;
     private JTextField textField2;
-    private JTextField textField3;
     private JComboBox comboBox1;
-    private JComboBox comboBox2;
     private JButton backButton;
-    private JButton saveButton;
     private JButton logoutButton;
+    private JButton saveButton;
 
-    public MaintainCustomerCreateNew() {
-        //Displays the Travel Advisor Maintain Customer Create New page
+    public TravelAdvisorIssueRefund() {
+        //Displays the Travel Advisor Issue Refund page
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(1000,800);
-        this.setTitle("Travel Advisor Maintain Customer Create New");
-        this.setContentPane(maintaincustomercreatenewPanel);
+        this.setTitle("Travel Advisor Issue Refund");
+        this.setContentPane(traveladvisorissuerefundPanel);
         this.setLocationRelativeTo(null);
 
         backButton.addActionListener(new ActionListener() {
@@ -31,9 +29,8 @@ public class MaintainCustomerCreateNew extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 //when pressed user is taken back to main manager page
                 dispose();
-                TravelAdvisorMaintainCustomers travelAdvisorMaintainCustomers = new TravelAdvisorMaintainCustomers();
-                travelAdvisorMaintainCustomers.setVisible(true);
-                dispose();
+                TravelAdvisorMain travelAdvisorMain = new TravelAdvisorMain();
+                travelAdvisorMain.setVisible(true);
             }
         });
 
@@ -42,6 +39,7 @@ public class MaintainCustomerCreateNew extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 //Allows the user to close the software
                 dispose();
+
             }
         });
     }

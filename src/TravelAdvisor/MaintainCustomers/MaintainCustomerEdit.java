@@ -22,7 +22,7 @@ public class MaintainCustomerEdit extends JFrame {
         //Displays the Travel Advisor Maintain customer Edit page
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(1000,800);
-        this.setTitle("Travel Advisor Generate Report");
+        this.setTitle("Travel Advisor Maintain Customer Edit");
         this.setContentPane(maintaincustomereditPanel);
         this.setLocationRelativeTo(null);
 

@@ -32,7 +32,7 @@ public class SetDiscountPlanEdit extends JFrame {
                 dispose();
                 ManagerSetDiscountPlan managerSetDiscountPlan = new ManagerSetDiscountPlan();
                 managerSetDiscountPlan.setVisible(true);
-                dispose();
+
             }
         });
 

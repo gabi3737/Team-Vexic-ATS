@@ -19,7 +19,7 @@ public class ManageBlankOrder extends JFrame {
         //Displays the Manage Blank Order
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(1000, 800);
-        this.setTitle("Manage Blanks");
+        this.setTitle("Manage Blanks Order Blanks");
         this.setContentPane(manageorderPanel);
         this.setLocationRelativeTo(null);
 
