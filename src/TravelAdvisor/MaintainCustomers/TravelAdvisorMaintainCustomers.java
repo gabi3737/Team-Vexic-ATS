@@ -25,6 +25,24 @@ public class TravelAdvisorMaintainCustomers extends JFrame {
         this.setContentPane(traveladvisormaintaincustomerPanel);
         this.setLocationRelativeTo(null);
 
+        createNewButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                MaintainCustomerCreateNew maintainCustomerCreateNew = new MaintainCustomerCreateNew();
+                maintainCustomerCreateNew.setVisible(true);
+                dispose();
+            }
+        });
+
+        editButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                MaintainCustomerEdit maintainCustomerEdit = new MaintainCustomerEdit();
+                maintainCustomerEdit.setVisible(true);
+                dispose();
+            }
+        });
+
         backButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
