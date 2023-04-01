@@ -1,5 +1,8 @@
 package Manager.SetDiscountPlan;
 
+import Manager.MainPage.ManagerMain;
+import TravelAdvisor.MainPage.TravelAdvisorMain;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -43,8 +46,8 @@ public class ManagerSetDiscountPlan extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 //when pressed user the user is taken back to Set Discount Plan Manager page
                 dispose();
-                ManagerSetDiscountPlan managerSetDiscountPlan = new ManagerSetDiscountPlan();
-                managerSetDiscountPlan.setVisible(true);
+                ManagerMain managerMain = new ManagerMain();
+                managerMain.setVisible(true);
             }
         });
         logoutButton.addActionListener(new ActionListener() {
