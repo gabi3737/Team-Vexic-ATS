@@ -6,6 +6,9 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * A class that holds the functionality of adding a new commission rate
+ */
 public class ManageCommissionAdd extends JFrame {
 
     private JPanel managecommissionaddPanel;
@@ -14,6 +17,9 @@ public class ManageCommissionAdd extends JFrame {
     private JButton saveButton;
     private JButton logoutButton;
 
+    /**
+     * Displays the Manage Commissions Add page
+     */
     public ManageCommissionAdd(){
         //Displays the Manage Commissions Add page
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

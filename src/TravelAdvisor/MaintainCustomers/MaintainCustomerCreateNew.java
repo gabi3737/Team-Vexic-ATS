@@ -6,6 +6,9 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ *  A class that holds the functionality of creating a new customer account
+ */
 public class MaintainCustomerCreateNew extends JFrame {
 
     private JPanel maintaincustomercreatenewPanel;
@@ -18,6 +21,9 @@ public class MaintainCustomerCreateNew extends JFrame {
     private JButton saveButton;
     private JButton logoutButton;
 
+    /**
+     * Displays the Travel Advisor Maintain Customer Create New page
+     */
     public MaintainCustomerCreateNew() {
         //Displays the Travel Advisor Maintain Customer Create New page
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

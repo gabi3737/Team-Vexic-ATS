@@ -4,6 +4,9 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * A class that hold the functionality of adding a new travel advisor account
+ */
 public class ManageAdvisorAddNew extends JFrame {
 
 
@@ -16,6 +19,9 @@ public class ManageAdvisorAddNew extends JFrame {
     private JComboBox comboBox1;
     private JButton logoutButton;
 
+    /**
+     * Displays the Add new page from Manage Advisors
+     */
     public ManageAdvisorAddNew() {
         //Displays the Add new page from Manage Advisors
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

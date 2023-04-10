@@ -6,6 +6,9 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * A class that holds the functionality of replacing the blanks of a travel advisor.
+ */
 public class ManageReplaceBlanks extends JFrame {
 
 
@@ -18,6 +21,9 @@ public class ManageReplaceBlanks extends JFrame {
     private JButton backButton;
     private JButton saveButton;
 
+    /**
+     * Displays the Manage Replace blanks main page
+     */
     public ManageReplaceBlanks() {
         //Displays the Manage Replace blanks main page
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

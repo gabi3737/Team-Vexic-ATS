@@ -6,6 +6,9 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * A class that holds the functionality of editing an existing discount plan
+ */
 public class SetDiscountPlanEdit extends JFrame {
 
     private JPanel setdiscountplaneditPanel;
@@ -16,6 +19,9 @@ public class SetDiscountPlanEdit extends JFrame {
     private JButton logoutButton;
     private JButton saveButton;
 
+    /**
+     * Displays the Manager Set Discount Edit Page
+     */
     public SetDiscountPlanEdit() {
         //Displays the Manager Set Discount Edit Page
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

@@ -4,6 +4,9 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * A class that holds the functionality of adding a new discount plan.
+ */
 public class SetDiscountPlanAdd extends JFrame {
 
     private JPanel setdiscountplanaddPanel;
@@ -13,6 +16,9 @@ public class SetDiscountPlanAdd extends JFrame {
     private JButton backButton;
     private JButton saveButton;
 
+    /**
+     * Displays the Set Discount Plan Add page for Manager
+     */
     public SetDiscountPlanAdd() {
         //Displays the Set Discount Plan Add page for Manager
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

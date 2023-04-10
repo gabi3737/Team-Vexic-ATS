@@ -8,6 +8,9 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * A class that holds all the information of the manager
+ */
 public class ManagerMain extends JFrame {
 
     private JPanel managermainPanel;
@@ -16,6 +19,9 @@ public class ManagerMain extends JFrame {
     private JButton setDiscountPlanButton;
     private JButton logoutButton;
 
+    /**
+     * Displays the main page of Manager
+     */
     public ManagerMain() {
         //Displays the main page of Manager
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

@@ -6,6 +6,9 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * A class that holds the functionality of the manager assigning a quanitity of blanks to an advisors
+ */
 public class ManagerAssignBlank extends JFrame {
 
     private JPanel managerassignblankPanel;
@@ -16,6 +19,9 @@ public class ManagerAssignBlank extends JFrame {
     private JButton backButton;
     private JButton saveButton;
 
+    /**
+     * Displays the Assign Blank Page
+     */
     public ManagerAssignBlank() {
         //Displays the Assign Blank Page
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

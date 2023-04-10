@@ -6,6 +6,9 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ *  A class that holds the functionality of issuing a refund to a customer
+ */
 public class TravelAdvisorIssueRefund extends JFrame {
 
     private JPanel traveladvisorissuerefundPanel;
@@ -16,6 +19,9 @@ public class TravelAdvisorIssueRefund extends JFrame {
     private JButton logoutButton;
     private JButton saveButton;
 
+    /**
+     * Displays the Travel Advisor Issue Refund page
+     */
     public TravelAdvisorIssueRefund() {
         //Displays the Travel Advisor Issue Refund page
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

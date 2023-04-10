@@ -7,6 +7,9 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * A class that holds the functionality of managing blanks, such as replacing, ordering or updating blanks
+ */
 public class AdministratorManageBlanks extends JFrame {
 
 
@@ -18,6 +21,9 @@ public class AdministratorManageBlanks extends JFrame {
     private JButton backButton;
     private JButton saveButton;
 
+    /**
+     * Displays the Manage Blanks page
+     */
     public AdministratorManageBlanks() {
         //Displays the Manage Blanks page
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

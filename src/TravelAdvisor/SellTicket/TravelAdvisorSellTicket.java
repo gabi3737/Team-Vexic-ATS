@@ -7,6 +7,9 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * A class that holds the functionality of selling a ticket to a customer
+ */
 public class TravelAdvisorSellTicket extends JFrame {
 
     private JPanel traveladvisorsellticketPanel;
@@ -18,6 +21,9 @@ public class TravelAdvisorSellTicket extends JFrame {
     private JButton saveButton;
     private JTable table1;
 
+    /**
+     * Displays the Travel Advisor Sell Ticket page
+     */
     public TravelAdvisorSellTicket() {
         //Displays the Travel Advisor Sell Ticket page
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

@@ -4,6 +4,9 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * A class that holds the functionality of editing the details of an existing travel advisors account
+ */
 public class ManageAdvisorEdit extends JFrame{
     private JPanel editPanel;
     private JTextField idField;
@@ -14,7 +17,9 @@ public class ManageAdvisorEdit extends JFrame{
     private JButton logoutButton;
     private JButton saveButton;
 
-
+    /**
+     * Displays the Add new page from Manage Advisors
+     */
     public ManageAdvisorEdit() {
         //Displays the Add new page from Manage Advisors
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

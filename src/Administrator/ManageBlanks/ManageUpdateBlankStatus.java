@@ -4,6 +4,9 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * A class that holds the functionality of updating the status of a blank, for example updating a cancelled blank to "void"
+ */
 public class ManageUpdateBlankStatus extends JFrame {
 
     private JPanel updateBlankStatus;
@@ -13,6 +16,9 @@ public class ManageUpdateBlankStatus extends JFrame {
     private JButton saveButton;
     private JButton backButton;
 
+    /**
+     * Displays the Manage Update Blank Status page
+     */
     public ManageUpdateBlankStatus() {
         //Displays the Manage Update Blank Status page
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

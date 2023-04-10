@@ -6,6 +6,9 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * A class that holds the functionality of managing the database, such as backup, restore and fix database
+ */
 public class AdministratorManageDatabase extends JFrame {
 
 
@@ -17,6 +20,9 @@ public class AdministratorManageDatabase extends JFrame {
     private JButton saveButton;
     private JButton logoutButton;
 
+    /**
+     * Displays the ManageDatabase page for the user
+     */
     public AdministratorManageDatabase() {
         //Displays the ManageDatabase page for the user
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

@@ -6,6 +6,9 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * A class that holds the functionality of managing a customer accounts, for example, creating a new account and editing/deleting an existing account
+ */
 public class TravelAdvisorMaintainCustomers extends JFrame {
 
     private JPanel traveladvisormaintaincustomerPanel;
@@ -17,6 +20,9 @@ public class TravelAdvisorMaintainCustomers extends JFrame {
     private JButton backButton;
     private JButton saveButton;
 
+    /**
+     * Displays the Travel Advisor Maintain Customer page
+     */
     public TravelAdvisorMaintainCustomers() {
         //Displays the Travel Advisor Maintain Customer page
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

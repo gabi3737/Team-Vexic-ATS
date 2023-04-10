@@ -6,6 +6,9 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * A class that holds the functionality of managing advisors, for example, creating a new account and editing/deleting an existing account
+ */
 public class AdministratorManageAdvisor extends JFrame {
 
 
@@ -18,6 +21,9 @@ public class AdministratorManageAdvisor extends JFrame {
     private JButton saveButton;
     private JButton addNewButton;
 
+    /**
+     * Displays the First Administrator page
+     */
     public AdministratorManageAdvisor() {
         //Displays the First Administrator page
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

@@ -7,6 +7,9 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * A class that holds the functionality of generating one of the following reports, Ticket stock turnover report, domestic report or individual report
+ */
 public class TravelAdvisorGenerateReport extends JFrame {
 
     private JPanel traveladvisorgeneratereportPanel;
@@ -16,6 +19,9 @@ public class TravelAdvisorGenerateReport extends JFrame {
     private JButton logoutButton;
     private JButton backButton;
 
+    /**
+     * Allows the Travel Advisor Generate Report Page
+     */
     public TravelAdvisorGenerateReport() {
         //Allows the Travel Advisor Generate Report Page
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

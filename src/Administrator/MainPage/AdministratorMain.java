@@ -9,6 +9,9 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * A class that holds all the information of the Administrator
+ */
 public class AdministratorMain extends JFrame {
 
 
@@ -19,6 +22,9 @@ public class AdministratorMain extends JFrame {
     private JButton manageCommissionsButton;
     private JButton logoutButton;
 
+    /**
+     * Displays the First Administrator page
+     */
     public AdministratorMain() {
         //Displays the First Administrator page
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

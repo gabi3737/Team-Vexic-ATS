@@ -7,6 +7,9 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * A class that holds the functionality of managing the commission rate, for example, adding, deleting or editing a commission rate
+ */
 public class AdministratorManageCommission extends JFrame {
 
     private JPanel managecommissionPanel;
@@ -17,6 +20,9 @@ public class AdministratorManageCommission extends JFrame {
     private JButton backButton;
     private JButton saveButton;
 
+    /**
+     * Displays the Manage Commissions page
+     */
     public  AdministratorManageCommission() {
         //Displays the Manage Commissions page
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

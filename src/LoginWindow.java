@@ -8,6 +8,9 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * A class that holds the functionality of the login window displayed to users
+ */
 public class LoginWindow extends JFrame {
     private JButton ExitButton;
     private JPanel loginPanel;
@@ -21,6 +24,9 @@ public class LoginWindow extends JFrame {
     private JButton managerButtonTestButton;
     private JButton travelAdvisorButtonTestButton;
 
+    /**
+     * Displays the login window page to the user
+     */
     public LoginWindow() {
 
         ImageIcon originalIcon = new ImageIcon("Images/AppLogo2.png");

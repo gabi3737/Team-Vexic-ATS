@@ -6,6 +6,9 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * A class that holds the functionality of ordering blanks by type
+ */
 public class ManageBlankOrder extends JFrame {
 
 
@@ -15,6 +18,9 @@ public class ManageBlankOrder extends JFrame {
     private JButton logoutButton;
     private JComboBox comboBox1;
 
+    /**
+     * Displays the Manage Blank Order
+     */
     public ManageBlankOrder() {
         //Displays the Manage Blank Order
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

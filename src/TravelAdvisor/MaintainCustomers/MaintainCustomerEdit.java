@@ -6,6 +6,9 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * A class that holds the functionality of editing the details of an existing customers account
+ */
 public class MaintainCustomerEdit extends JFrame {
 
     private JPanel maintaincustomereditPanel;
@@ -18,6 +21,9 @@ public class MaintainCustomerEdit extends JFrame {
     private JButton backButton;
     private JButton saveButton;
 
+    /**
+     * Displays the Travel Advisor Maintain customer Edit page
+     */
     public MaintainCustomerEdit() {
         //Displays the Travel Advisor Maintain customer Edit page
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

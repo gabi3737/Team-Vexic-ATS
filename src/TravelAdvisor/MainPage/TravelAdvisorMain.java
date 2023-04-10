@@ -9,6 +9,9 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * A class that holds all the information of the travel adivsor
+ */
 public class TravelAdvisorMain extends JFrame {
 
     private JPanel traveladvisormainPanel;
@@ -18,6 +21,9 @@ public class TravelAdvisorMain extends JFrame {
     private JButton issueRefundButton;
     private JButton logoutButton;
 
+    /**
+     * Allows the Travel Advisor Main page to be shown
+     */
     public TravelAdvisorMain() {
         //Allows the Travel Advisor Main page to be shown
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
