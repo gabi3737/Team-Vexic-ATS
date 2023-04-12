@@ -5,6 +5,7 @@ import Main.Administrator.*;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
+import javax.xml.crypto.Data;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -16,8 +17,8 @@ import java.awt.event.ActionListener;
 public class LoginWindow extends JFrame {
     private JButton ExitButton;
     private JPanel loginPanel;
-    private JTextField textField1;
-    private JTextField textField2;
+    private JTextField user;
+    private JTextField pass;
     private JButton LoginButton;
     private JLabel TeamLogo;
     private JButton administratorButtonTestButton;
@@ -38,6 +39,8 @@ public class LoginWindow extends JFrame {
         TeamLogo.setSize(100, 100);
         TeamLogo.setBorder(new EmptyBorder(40, 40, 40, 80));
 
+
+
         LoginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -48,8 +51,37 @@ public class LoginWindow extends JFrame {
 //                ManagerMain managerMain = new ManagerMain();
 //                managerMain.setVisible(true);
 //                dispose();
-                System.out.println(textField1.getText());
-                DatabaseConnector.connect(textField1.getText(),textField2.getText());
+                System.out.println(user.getText() + ", " + pass.getText());
+                if (DatabaseConnector.QueryMatches("SELECT * FROM Login WHERE username = ? AND password = ?",user.getText(), pass.getText()))
+                {
+                    System.out.println("logged in as: " + user.getText());
+                    String userRole = DatabaseConnector.getUserDesignation(user.getText());
+                    System.out.println(userRole);
+                    if (userRole.equals("Travel Advisor")){
+                        TravelAdvisorMain travelAdvisorMain = new TravelAdvisorMain();
+                        travelAdvisorMain.setVisible(true);
+                        dispose();
+                    }
+                    else if (userRole.equals("Sales Agent")){
+                        ManagerMain managerMain = new ManagerMain();
+                        managerMain.setVisible(true);
+                        dispose();
+                    }
+                    else if (userRole.equals("Manager")){
+                        ManagerMain managerMain = new ManagerMain();
+                        managerMain.setVisible(true);
+                        dispose();
+                    }
+                    else if (userRole.equals("Administrator")){
+                        AdministratorMain administratorMain = new AdministratorMain();
+                        administratorMain.setVisible(true);
+                        dispose();
+                    }
+                }
+                else
+                {
+                    System.out.println("Error logging in");
+                }
             }
         });
 
@@ -105,6 +137,9 @@ public class LoginWindow extends JFrame {
         loginWindow.setTitle("Vexic");
         loginWindow.setContentPane(loginWindow.loginPanel);
         loginWindow.setLocationRelativeTo(null);
+
+        DatabaseConnector.connect("in2018g28_a","dxPL33CI");
+        //DatabaseConnector.connect("in2018g28_d", "BC7F1Qxr");
     }
 }
 

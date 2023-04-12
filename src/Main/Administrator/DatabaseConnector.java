@@ -73,4 +73,39 @@ public class DatabaseConnector {
             return -1;
         }
     }
+
+    public static boolean QueryMatches(String query, Object... parameters){
+        try (PreparedStatement preparedStatement = conn.prepareStatement(query)) {
+            for (int i = 0; i < parameters.length; i++) {
+                preparedStatement.setObject(i + 1, parameters[i]);
+            }
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                return resultSet.next();
+            }
+        } catch (SQLException e) {
+            System.out.println("Error executing query and checking credentials: " + e.getMessage());
+            return false;
+        }
+    }
+
+    public static String getUserDesignation(String username) {
+        String selectQuery = "SELECT e.designation " +
+                "FROM Login l " +
+                "JOIN Employee e ON l.EmployeeemployeeID = e.employeeID " +
+                "WHERE l.username = ?";
+
+        try (PreparedStatement preparedStatement = conn.prepareStatement(selectQuery)) {
+            preparedStatement.setString(1, username);
+
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                if (resultSet.next()) {
+                    return resultSet.getString("designation");
+                }
+            }
+        } catch (SQLException e) {
+            System.out.println("Error executing query and getting user designation: " + e.getMessage());
+        }
+
+        return null;
+    }
 }
