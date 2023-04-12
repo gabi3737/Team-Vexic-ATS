@@ -13,7 +13,7 @@ public class ManagerGenerateReport extends JFrame {
 
     private JPanel managergeneratereportPanel;
     private JButton generateGlobalDomesticSalesButton;
-    private JButton generateGlobalInterlinesSalesButton;
+    private JButton generateGlobalINterlinesSalesButton;
     private JButton logoutButton;
     private JButton backButton;
 

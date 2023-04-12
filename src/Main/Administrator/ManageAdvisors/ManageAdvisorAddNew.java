@@ -20,10 +20,9 @@ public class ManageAdvisorAddNew extends JFrame {
     private JTextField textField3;
     private JButton backButton;
     private JButton saveButton;
-    private JComboBox comboBox1;
     private JButton logoutButton;
     private JTextField textField4;
-    private JLabel Name;
+    private JComboBox comboBox1;
 
     /**
      * Displays the Add new page from Manage Advisors

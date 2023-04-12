@@ -10,10 +10,10 @@ import java.awt.event.ActionListener;
 public class ManageCommissionAdd extends JFrame {
 
     private JPanel managecommissionaddPanel;
-    private JComboBox comboBox1;
+    private JTextField textField1;
     private JButton backButton;
-    private JButton saveButton;
     private JButton logoutButton;
+    private JButton saveButton;
 
     /**
      * Displays the Manage Commissions Add page

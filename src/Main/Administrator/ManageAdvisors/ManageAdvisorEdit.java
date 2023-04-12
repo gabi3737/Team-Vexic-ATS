@@ -9,13 +9,13 @@ import java.awt.event.ActionListener;
  */
 public class ManageAdvisorEdit extends JFrame{
     private JPanel editPanel;
-    private JTextField idField;
-    private JTextField passwordField;
-    private JComboBox accounttypeField;
-    private JTextField usernameField;
+    private JTextField textField1;
+    private JTextField textField2;
+    private JTextField textField3;
+    private JComboBox comboBox1;
+    private JButton saveButton;
     private JButton backButton;
     private JButton logoutButton;
-    private JButton saveButton;
 
     /**
      * Displays the Add new page from Manage Advisors

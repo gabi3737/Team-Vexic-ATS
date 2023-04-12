@@ -12,12 +12,12 @@ public class ManageReplaceBlanks extends JFrame {
 
     private JPanel replaceblanksPanel;
     private JTextField textField1;
+    private JButton deleteBlankButton;
     private JTextField textField2;
     private JComboBox comboBox1;
-    private JButton deleteBlankButton;
+    private JButton saveButton;
     private JButton logoutButton;
     private JButton backButton;
-    private JButton saveButton;
 
     /**
      * Displays the Manage Replace blanks main page

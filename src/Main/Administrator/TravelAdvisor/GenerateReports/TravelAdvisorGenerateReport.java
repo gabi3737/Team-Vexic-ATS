@@ -14,7 +14,7 @@ public class TravelAdvisorGenerateReport extends JFrame {
     private JPanel traveladvisorgeneratereportPanel;
     private JButton generateTicketStockTurnoverButton;
     private JButton generateDomesticReportButton;
-    private JButton generateInternationalReportButton;
+    private JButton generateInternationalRpoertButton;
     private JButton logoutButton;
     private JButton backButton;
 

@@ -13,12 +13,12 @@ public class TravelAdvisorSellTicket extends JFrame {
 
     private JPanel traveladvisorsellticketPanel;
     private JTextField textField1;
-    private JComboBox comboBox1;
-    private JTextField textField2;
+    private JTextField textField3;
     private JButton backButton;
     private JButton logoutButton;
     private JButton saveButton;
-    private JTable table1;
+    private JTextField textField4;
+    private JComboBox comboBox1;
 
     /**
      * Displays the Travel Advisor Sell Ticket page

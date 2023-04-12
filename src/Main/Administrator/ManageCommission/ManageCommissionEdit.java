@@ -11,9 +11,9 @@ import java.awt.event.ActionListener;
 public class ManageCommissionEdit extends JFrame {
 
     private JPanel managecommissioneditPanel;
-    private JComboBox comboBox1;
-    private JButton backButton;
+    private JTextField textField1;
     private JButton saveButton;
+    private JButton backButton;
     private JButton logoutButton;
 
     /**

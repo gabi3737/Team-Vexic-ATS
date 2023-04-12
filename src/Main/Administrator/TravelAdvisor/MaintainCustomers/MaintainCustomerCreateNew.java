@@ -16,8 +16,8 @@ public class MaintainCustomerCreateNew extends JFrame {
     private JComboBox comboBox1;
     private JComboBox comboBox2;
     private JButton backButton;
-    private JButton saveButton;
     private JButton logoutButton;
+    private JButton saveButton;
 
     /**
      * Displays the Travel Advisor Maintain Customer Create New page

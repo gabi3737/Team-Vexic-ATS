@@ -15,14 +15,14 @@ public class AdministratorManageAdvisor extends JFrame {
 
 
     private JPanel administratormanageadvisorsPanel;
-    private JTextField textField1;
     private JButton logoutButton;
     private JButton editButton;
-    private JButton deleteButton;
     private JButton backButton;
-    private JButton saveButton;
     private JButton addNewButton;
+    private JTextField textField1;
+    private JButton deleteButton;
     private JButton viewAllButton;
+    private JButton saveButton;
 
     /**
      * Displays the First Main.Administrator page

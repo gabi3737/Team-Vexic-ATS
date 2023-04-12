@@ -13,12 +13,11 @@ import java.awt.event.ActionListener;
 public class AdministratorManageCommission extends JFrame {
 
     private JPanel managecommissionPanel;
+    private JButton deleteButton;
     private JButton addCommissionButton;
     private JButton editButton;
-    private JButton deleteButton;
     private JButton logoutButton;
     private JButton backButton;
-    private JButton saveButton;
 
     /**
      * Displays the Manage Commissions page

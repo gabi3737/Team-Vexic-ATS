@@ -12,10 +12,10 @@ public class ManageBlankOrder extends JFrame {
 
 
     private JPanel manageorderPanel;
-    private JButton backButton;
-    private JButton saveButton;
-    private JButton logoutButton;
     private JComboBox comboBox1;
+    private JButton backButton;
+    private JButton logoutButton;
+    private JButton saveButton;
 
     /**
      * Displays the Manage Blank Order

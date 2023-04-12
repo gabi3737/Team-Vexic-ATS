@@ -17,8 +17,8 @@ public class ManagerAssignBlank extends JFrame {
     private JTextField textField2;
     private JComboBox comboBox1;
     private JButton logoutButton;
-    private JButton backButton;
     private JButton saveButton;
+    private JButton backButton;
 
     /**
      * Displays the Assign Blank Page

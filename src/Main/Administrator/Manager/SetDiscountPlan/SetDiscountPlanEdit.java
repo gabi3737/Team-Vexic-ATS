@@ -10,9 +10,8 @@ import java.awt.event.ActionListener;
 public class SetDiscountPlanEdit extends JFrame {
 
     private JPanel setdiscountplaneditPanel;
-    private JComboBox comboBox1;
     private JTextField textField1;
-    private JButton deleteButton;
+    private JComboBox comboBox1;
     private JButton backButton;
     private JButton logoutButton;
     private JButton saveButton;

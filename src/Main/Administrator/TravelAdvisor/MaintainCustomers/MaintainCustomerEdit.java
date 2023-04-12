@@ -15,9 +15,9 @@ public class MaintainCustomerEdit extends JFrame {
     private JTextField textField3;
     private JComboBox comboBox1;
     private JComboBox comboBox2;
+    private JButton saveButton;
     private JButton logoutButton;
     private JButton backButton;
-    private JButton saveButton;
 
     /**
      * Displays the Travel Advisor Maintain customer Edit page

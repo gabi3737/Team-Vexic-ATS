@@ -10,11 +10,11 @@ import java.awt.event.ActionListener;
 public class SetDiscountPlanAdd extends JFrame {
 
     private JPanel setdiscountplanaddPanel;
-    private JComboBox comboBox1;
     private JTextField textField1;
+    private JComboBox comboBox1;
     private JButton logoutButton;
-    private JButton backButton;
     private JButton saveButton;
+    private JButton backButton;
 
     /**
      * Displays the Set Discount Plan Add page for Main.Administrator.Manager

@@ -13,8 +13,8 @@ public class ManageUpdateBlankStatus extends JFrame {
     private JPanel updateBlankStatus;
     private JTextField textField1;
     private JComboBox comboBox1;
-    private JButton logoutButton;
     private JButton saveButton;
+    private JButton logoutButton;
     private JButton backButton;
 
     /**

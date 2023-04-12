@@ -17,8 +17,8 @@ public class AdministratorManageDatabase extends JFrame {
     private JButton restoreButton;
     private JButton fixDatabaseButton;
     private JButton backButton;
-    private JButton saveButton;
     private JButton logoutButton;
+    private JButton saveButton;
 
     /**
      * Displays the ManageDatabase page for the user

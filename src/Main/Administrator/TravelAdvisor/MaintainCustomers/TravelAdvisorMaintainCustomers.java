@@ -14,8 +14,8 @@ public class TravelAdvisorMaintainCustomers extends JFrame {
     private JPanel traveladvisormaintaincustomerPanel;
     private JButton createNewButton;
     private JTextField textField1;
-    private JButton editButton;
     private JButton deleteButton;
+    private JButton editButton;
     private JButton logoutButton;
     private JButton backButton;
     private JButton saveButton;

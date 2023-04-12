@@ -18,7 +18,6 @@ public class AdministratorManageBlanks extends JFrame {
     private JButton updateBlankStatusButton;
     private JButton logoutButton;
     private JButton backButton;
-    private JButton saveButton;
 
     /**
      * Displays the Manage Blanks page
