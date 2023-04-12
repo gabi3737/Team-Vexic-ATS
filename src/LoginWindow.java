@@ -1,6 +1,7 @@
-import Administrator.MainPage.AdministratorMain;
-import Manager.MainPage.ManagerMain;
-import TravelAdvisor.MainPage.TravelAdvisorMain;
+import Main.Administrator.MainPage.AdministratorMain;
+import Main.Administrator.Manager.MainPage.ManagerMain;
+import Main.Administrator.TravelAdvisor.MainPage.TravelAdvisorMain;
+import Main.Administrator.*;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -47,6 +48,8 @@ public class LoginWindow extends JFrame {
 //                ManagerMain managerMain = new ManagerMain();
 //                managerMain.setVisible(true);
 //                dispose();
+                System.out.println(textField1.getText());
+                DatabaseConnector.connect(textField1.getText(),textField2.getText());
             }
         });
 

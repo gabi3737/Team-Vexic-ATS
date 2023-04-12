@@ -1,3 +1,5 @@
+import Main.Administrator.DatabaseConnector;
+
 import java.sql.Connection;
 
 /**
