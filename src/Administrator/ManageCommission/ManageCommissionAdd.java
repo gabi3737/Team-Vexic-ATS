@@ -7,7 +7,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * A class that holds the functionality of adding a new commission rate
+ * A class to creat Graphical User Interface that holds the functionality of adding a new commission rate
  */
 public class ManageCommissionAdd extends JFrame {
 

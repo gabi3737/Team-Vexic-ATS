@@ -5,7 +5,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * A class that holds the functionality of editing an existing commission rates details
+ * A class to creat Graphical User Interface
+ * It holds the functionality of editing an existing commission rates details
  */
 public class ManageCommissionEdit extends JFrame {
 

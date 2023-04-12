@@ -10,7 +10,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * A class that holds all the information of the Administrator
+ * A class to creat Graphical User Interface
+ * It holds all the information of the Administrator
  */
 public class AdministratorMain extends JFrame {
 
@@ -34,6 +35,10 @@ public class AdministratorMain extends JFrame {
         this.setLocationRelativeTo(null);
 
         manageDatabaseButton.addActionListener(new ActionListener() {
+            /**
+             * Implementation of ActionEvent
+             * @param e
+             */
             @Override
             public void actionPerformed(ActionEvent e) {
                 //Displays ManageDatabase page when pressed

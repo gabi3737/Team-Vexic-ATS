@@ -61,6 +61,10 @@ public class AdministratorManageBlanks extends JFrame {
 
 
         backButton.addActionListener(new ActionListener() {
+            /**
+             * Implementation of ActionEvent to allow the user to go back to the Administrator main page
+             * @param e
+             */
             @Override
             public void actionPerformed(ActionEvent e) {
                 //Allows the user to go back to Administrator main page

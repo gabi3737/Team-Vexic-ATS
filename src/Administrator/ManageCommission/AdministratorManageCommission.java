@@ -8,7 +8,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * A class that holds the functionality of managing the commission rate, for example, adding, deleting or editing a commission rate
+ * A class to creat Graphical User Interface
+ * It holds the functionality of managing the commission rate, for example, adding, deleting or editing a commission rate
  */
 public class AdministratorManageCommission extends JFrame {
 

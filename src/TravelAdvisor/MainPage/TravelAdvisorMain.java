@@ -10,7 +10,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * A class that holds all the information of the travel adivsor
+ * A class to creat Graphical User Interface
+ * It holds all the information of the travel advisor
  */
 public class TravelAdvisorMain extends JFrame {
 

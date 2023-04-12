@@ -9,7 +9,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * A class that holds the functionality of the login window displayed to users
+ * A class to creat Graphical User Interface of Login Page
+ * It holds the functionality of the login window displayed to users
  */
 public class LoginWindow extends JFrame {
     private JButton ExitButton;
@@ -28,7 +29,7 @@ public class LoginWindow extends JFrame {
      * Displays the login window page to the user
      */
     public LoginWindow() {
-
+        /** The App Logo added */
         ImageIcon originalIcon = new ImageIcon("Images/AppLogo2.png");
         Image originalImage = originalIcon.getImage();
         Image scaledImage = originalImage.getScaledInstance(200, -1, Image.SCALE_SMOOTH);
@@ -84,6 +85,12 @@ public class LoginWindow extends JFrame {
             }
         });
     }
+
+    /**
+     * The main method for the Login page
+     * Login window size by width and height specified
+     * @param args arguments
+     */
 
     public static void main(String[] args) {
         LoginWindow loginWindow = new LoginWindow();

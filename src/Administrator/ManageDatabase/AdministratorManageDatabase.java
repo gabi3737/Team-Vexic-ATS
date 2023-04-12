@@ -32,6 +32,10 @@ public class AdministratorManageDatabase extends JFrame {
         this.setLocationRelativeTo(null);
 
         backButton.addActionListener(new ActionListener() {
+            /**
+             * Implementation of ActionEvent to allow the user to go back to the Administrator main page
+             * @param e
+             */
             @Override
             public void actionPerformed(ActionEvent e) {
                 //Allows the user to go back to Administrator main page
@@ -42,6 +46,10 @@ public class AdministratorManageDatabase extends JFrame {
         });
 
         logoutButton.addActionListener(new ActionListener() {
+            /**
+             * Implementation of ActionEvent where the user will be logged out and exited here if the button is pressed.
+             * @param e
+             */
             @Override
             public void actionPerformed(ActionEvent e) {
                 //The user will be logged out and exited here if the button is pressed.

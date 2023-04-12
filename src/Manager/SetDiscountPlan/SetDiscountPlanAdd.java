@@ -28,6 +28,10 @@ public class SetDiscountPlanAdd extends JFrame {
         this.setLocationRelativeTo(null);
 
         backButton.addActionListener(new ActionListener() {
+            /**
+             * when pressed user the user is taken back to Set Discount Plan Manager page
+             * @param e the event to be processed
+             */
             @Override
             public void actionPerformed(ActionEvent e) {
                 //when pressed user the user is taken back to Set Discount Plan Manager page

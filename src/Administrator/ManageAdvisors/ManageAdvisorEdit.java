@@ -29,6 +29,10 @@ public class ManageAdvisorEdit extends JFrame{
         this.setLocationRelativeTo(null);
 
         backButton.addActionListener(new ActionListener() {
+            /**
+             * Implementation of ActionEvent to allow the user to go back to the Manage advisors main page
+             * @param e
+             */
             @Override
             public void actionPerformed(ActionEvent e) {
                 //Allows the user to go back to the Manage advisors main page

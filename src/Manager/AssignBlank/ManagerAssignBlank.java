@@ -7,7 +7,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * A class that holds the functionality of the manager assigning a quanitity of blanks to an advisors
+ * A class to creat Graphical User Interface
+ * It holds the functionality of the manager assigning a quantity of blanks to an advisors
  */
 public class ManagerAssignBlank extends JFrame {
 

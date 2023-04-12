@@ -5,7 +5,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * A class that hold the functionality of adding a new travel advisor account
+ * A class to creat Graphical User Interface
+ * It holds the functionality of adding a new travel advisor account
  */
 public class ManageAdvisorAddNew extends JFrame {
 

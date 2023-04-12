@@ -9,7 +9,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * A class that holds all the information of the manager
+ * A class to creat Graphical User Interface that holds all the information of the manager
  */
 public class ManagerMain extends JFrame {
 
@@ -31,6 +31,11 @@ public class ManagerMain extends JFrame {
         this.setLocationRelativeTo(null);
 
         generateReportsButton.addActionListener(new ActionListener() {
+            /**
+             * Implementation of ActionEvent
+             * When button is pressed the Manager is taken to the Generate Report page
+             * @param e
+             */
             @Override
             public void actionPerformed(ActionEvent e) {
                 //When button is pressed the Manager is taken to the Generate Report page
@@ -59,6 +64,10 @@ public class ManagerMain extends JFrame {
         });
 
         logoutButton.addActionListener(new ActionListener() {
+            /**
+             * An ActionEvent added
+             * @param e the event to be processed
+             */
             @Override
             public void actionPerformed(ActionEvent e) {
                 //Closes the software when pressed

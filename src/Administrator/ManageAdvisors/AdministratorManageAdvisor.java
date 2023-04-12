@@ -7,7 +7,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * A class that holds the functionality of managing advisors, for example, creating a new account and editing/deleting an existing account
+ * A class to creat Graphical User Interface
+ * It  holds the functionality of managing advisors, for example, creating a new account and editing/deleting an existing account
  */
 public class AdministratorManageAdvisor extends JFrame {
 
@@ -32,6 +33,9 @@ public class AdministratorManageAdvisor extends JFrame {
         this.setContentPane(administratormanageadvisorsPanel);
         this.setLocationRelativeTo(null);
 
+        /**
+         *Implementation of ActionListener
+         */
         addNewButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -51,6 +55,10 @@ public class AdministratorManageAdvisor extends JFrame {
         });
 
         backButton.addActionListener(new ActionListener() {
+            /**
+             * Implementation of ActionEvent
+             * @param e
+             */
             @Override
             public void actionPerformed(ActionEvent e) {
                 //Allows the user to go back to Administrator main page

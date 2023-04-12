@@ -5,7 +5,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * A class that holds the functionality of updating the status of a blank, for example updating a cancelled blank to "void"
+ * A class to creat Graphical User Interface
+ * It holds the functionality of updating the status of a blank, for example updating a cancelled blank to "void"
  */
 public class ManageUpdateBlankStatus extends JFrame {
 
@@ -28,6 +29,10 @@ public class ManageUpdateBlankStatus extends JFrame {
         this.setLocationRelativeTo(null);
 
         backButton.addActionListener(new ActionListener() {
+            /**
+             * Implementation of ActionEvent to allow the user to go back to the Administrator manage blank page
+             * @param e
+             */
             @Override
             public void actionPerformed(ActionEvent e) {
                 //Allows the user to go back to Administrator manage blank page

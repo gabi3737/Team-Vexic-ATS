@@ -19,7 +19,8 @@ public class ManagerGenerateReport extends JFrame {
     private JButton backButton;
 
     /**
-     * Displays the Generate Reports page from Manager, for example, a global domestic sales report or a global interlines sales report
+     * Displays the Generate Reports page from Manager,
+     * for example, a global domestic sales report or a global interlines sales report
      */
     public ManagerGenerateReport() {
         //Displays the Generate Reports page from Manager
@@ -30,6 +31,11 @@ public class ManagerGenerateReport extends JFrame {
         this.setLocationRelativeTo(null);
 
         backButton.addActionListener(new ActionListener() {
+            /**
+             * implementation of ActionEvent
+             * when pressed user is taken back to main manager page
+             * @param e
+             */
             @Override
             public void actionPerformed(ActionEvent e) {
                 //when pressed user is taken back to main manager page
@@ -40,6 +46,11 @@ public class ManagerGenerateReport extends JFrame {
         });
 
         logoutButton.addActionListener(new ActionListener() {
+            /**
+             * implementation of ActionEvent
+             * it allows the user to close the system
+             * @param e
+             */
             @Override
             public void actionPerformed(ActionEvent e) {
                 //Allows the user to close the software

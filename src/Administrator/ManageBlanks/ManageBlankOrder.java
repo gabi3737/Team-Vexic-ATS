@@ -7,7 +7,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * A class that holds the functionality of ordering blanks by type
+ * A class to creat Graphical User Interface
+ * It holds the functionality of ordering blanks by type
  */
 public class ManageBlankOrder extends JFrame {
 

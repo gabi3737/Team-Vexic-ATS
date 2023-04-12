@@ -6,6 +6,12 @@ import java.sql.SQLException;
  * A class that holds the functionality of connecting the database to the gui
  */
 public class DatabaseConnector {
+    /**
+     * A method to connect to the Database
+     * @param username  username to input
+     * @param password password to input
+     * @return connection
+     */
     public static Connection connect(String username, String password) {
         String url = "jdbc:mysql://smcse-stuproj00.city.ac.uk:3306/in2018g28?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC";
 
