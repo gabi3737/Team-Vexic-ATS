@@ -16,21 +16,20 @@ public class LoginWindow extends JFrame {
     private JButton ExitButton;
     private JPanel loginPanel;
     private JTextField textField1;
-    private JPasswordField passwordField1;
+    private JTextField textField2;
     private JButton LoginButton;
     private JLabel TeamLogo;
-    private JLabel UsernameLabel;
-    private JLabel PasswordLabel;
     private JButton administratorButtonTestButton;
     private JButton managerButtonTestButton;
     private JButton travelAdvisorButtonTestButton;
+
 
     /**
      * Displays the login window page to the user
      */
     public LoginWindow() {
         /** The App Logo added */
-        ImageIcon originalIcon = new ImageIcon("Images/AppLogo2.png");
+        ImageIcon originalIcon = new ImageIcon("Images/AirViaLogo.png");
         Image originalImage = originalIcon.getImage();
         Image scaledImage = originalImage.getScaledInstance(200, -1, Image.SCALE_SMOOTH);
         ImageIcon scaledIcon = new ImageIcon(scaledImage);
@@ -41,13 +40,13 @@ public class LoginWindow extends JFrame {
         LoginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //AdministratorMain administratorMain = new AdministratorMain();
-                //administratorMain.setVisible(true);
-                //dispose();
-
-                //ManagerMain managerMain = new ManagerMain();
-                //managerMain.setVisible(true);
-                //dispose();
+//                AdministratorMain administratorMain = new AdministratorMain();
+//                administratorMain.setVisible(true);
+//                dispose();
+//
+//                ManagerMain managerMain = new ManagerMain();
+//                managerMain.setVisible(true);
+//                dispose();
             }
         });
 
@@ -86,9 +85,12 @@ public class LoginWindow extends JFrame {
         });
     }
 
+
+
     /**
      * The main method for the Login page
      * Login window size by width and height specified
+     *
      * @param args arguments
      */
 
@@ -96,9 +98,10 @@ public class LoginWindow extends JFrame {
         LoginWindow loginWindow = new LoginWindow();
         loginWindow.setVisible(true);
         loginWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        loginWindow.setSize(1000,800);
+        loginWindow.setSize(1000, 800);
         loginWindow.setTitle("Vexic");
         loginWindow.setContentPane(loginWindow.loginPanel);
         loginWindow.setLocationRelativeTo(null);
     }
 }
+
