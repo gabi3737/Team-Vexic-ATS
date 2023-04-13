@@ -68,7 +68,7 @@ public class ManagerAssignBlank extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 long firstBlank = Long.parseLong(startBlank.getText());
                 long lastBlank = firstBlank + Long.parseLong(blankQnt.getText()) - 1;
-                System.out.println(firstBlank + "," + lastBlank);
+                JOptionPane.showMessageDialog(null,firstBlank + "," + lastBlank);
                 DatabaseConnector.assignBlanks(firstBlank,lastBlank,advisorName.getText());
             }
         });

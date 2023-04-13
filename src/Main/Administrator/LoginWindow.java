@@ -37,7 +37,7 @@ public class LoginWindow extends JFrame {
          * Logo sized width and height specified
          * border specified
          */
-        ImageIcon originalIcon = new ImageIcon("Images/AirViaLogo.png");
+        ImageIcon originalIcon = new ImageIcon("Images/AppLogo2.png");
         Image originalImage = originalIcon.getImage();
         Image scaledImage = originalImage.getScaledInstance(200, -1, Image.SCALE_SMOOTH);
         ImageIcon scaledIcon = new ImageIcon(scaledImage);
@@ -60,7 +60,7 @@ public class LoginWindow extends JFrame {
                 System.out.println(user.getText() + ", " + pass.getText());
                 if (DatabaseConnector.QueryMatches("SELECT * FROM Login WHERE username = ? AND password = ?",user.getText(), pass.getText()))
                 {
-                    System.out.println("logged in as: " + user.getText());
+                    JOptionPane.showMessageDialog(null,"logged in as: " + user.getText());
                     String userRole = DatabaseConnector.getUserDesignation(user.getText());
                     System.out.println(userRole);
                     if (userRole.equals("Travel Advisor")){
@@ -87,7 +87,7 @@ public class LoginWindow extends JFrame {
                 else
                 {
                     JOptionPane.showMessageDialog(null, "Error logging in. Please check your credentials.");
-                    System.out.println("Error logging in");
+                    JOptionPane.showMessageDialog(null, "Error logging in");
                 }
             }
         });

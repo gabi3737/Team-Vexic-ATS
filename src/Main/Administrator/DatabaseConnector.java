@@ -132,7 +132,7 @@ public class DatabaseConnector {
             update.close();
             return newRows;
         } catch (SQLException e) {
-            System.out.println("Error updating database: " + e.getMessage());
+            JOptionPane.showMessageDialog(null, "Error updating database: " + e.getMessage());
             return -1;
         }
     }
@@ -153,7 +153,7 @@ public class DatabaseConnector {
                 return resultSet.next();
             }
         } catch (SQLException e) {
-            System.out.println("Error executing query and checking credentials: " + e.getMessage());
+            JOptionPane.showMessageDialog(null ,"Error executing query and checking credentials: " + e.getMessage());
             return false;
         }
     }
@@ -179,7 +179,7 @@ public class DatabaseConnector {
                 }
             }
         } catch (SQLException e) {
-            System.out.println("Error executing query and getting user designation: " + e.getMessage());
+            JOptionPane.showMessageDialog(null, "Error executing query and getting user designation: " + e.getMessage());
         }
 
         return null;
@@ -207,7 +207,7 @@ public class DatabaseConnector {
                 return -1;
             }
         } catch (SQLException e) {
-            System.out.println("Error updating employee: " + e.getMessage());
+            JOptionPane.showMessageDialog(null,"Error updating employee: " + e.getMessage());
             return -1;
         }
     }
@@ -257,7 +257,7 @@ public class DatabaseConnector {
             }
             preparedStatement.executeBatch();
         } catch (SQLException e) {
-            System.out.println("Error inserting blanks: " + e.getMessage());
+            JOptionPane.showMessageDialog(null,"Error inserting blanks: " + e.getMessage());
         }
     }
 
@@ -268,7 +268,7 @@ public class DatabaseConnector {
             ResultSet results = statement.executeQuery(query);
             return results;
         } catch (SQLException e) {
-            System.out.println("Error fetching blanks: " + e.getMessage());
+            JOptionPane.showMessageDialog(null,"Error fetching blanks: " + e.getMessage());
             return null;
         }
     }
@@ -294,7 +294,7 @@ public class DatabaseConnector {
 
             return new JTable(data, columnNames);
         } catch (SQLException e) {
-            System.out.println("Error converting result set to table: " + e.getMessage());
+            JOptionPane.showMessageDialog(null,"Error converting result set to table: " + e.getMessage());
             return null;
         }
     }
@@ -327,7 +327,7 @@ public class DatabaseConnector {
             }
             preparedStatement.executeBatch();
         } catch (SQLException e) {
-            System.out.println("Error updating blanks: " + e.getMessage());
+            JOptionPane.showMessageDialog(null,"Error updating blanks: " + e.getMessage());
         }
     }
 
@@ -377,7 +377,7 @@ public class DatabaseConnector {
             frame.setVisible(true);
 
         } catch (SQLException e) {
-            System.out.println("Error displaying assigned blanks: " + e.getMessage());
+            JOptionPane.showMessageDialog(null,"Error displaying assigned blanks: " + e.getMessage());
         }
     }
 }

@@ -120,8 +120,7 @@ public class AdministratorManageAdvisor extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
-                DefaultTableModel tableModel = DatabaseConnector.QuerySQLTable("SELECT * FROM Employee e " +
-                        "JOIN Advisor a ON e.employeeID = a.EmployeeemployeeID");
+                DefaultTableModel tableModel = DatabaseConnector.QuerySQLTable("SELECT * FROM Employee e ");
                 if (tableModel != null) {
                     resultsTable.setModel(tableModel);
                 }

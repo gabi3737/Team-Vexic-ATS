@@ -1,9 +1,11 @@
 package Main.Administrator.TravelAdvisor.MaintainCustomers;
 
+import Main.Administrator.DatabaseConnector;
 import Main.Administrator.LoginWindow;
 import Main.Administrator.TravelAdvisor.MainPage.TravelAdvisorMain;
 
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -20,6 +22,8 @@ public class TravelAdvisorMaintainCustomers extends JFrame {
     private JButton logoutButton;
     private JButton backButton;
     private JButton saveButton;
+    private JButton viewAllButton;
+    private JTable resultsTable;
 
     /**
      * Displays the Travel Advisor Maintain Customer page
@@ -76,6 +80,16 @@ public class TravelAdvisorMaintainCustomers extends JFrame {
                 loginWindow.setContentPane(loginWindow.loginPanel);
                 loginWindow.setLocationRelativeTo(null);
                 dispose();
+            }
+        });
+
+        viewAllButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                DefaultTableModel tableModel = DatabaseConnector.QuerySQLTable("SELECT * FROM Customer ");
+                if (tableModel != null) {
+                    resultsTable.setModel(tableModel);
+                }
             }
         });
     }

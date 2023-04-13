@@ -57,7 +57,7 @@
           <background color="-12763069"/>
           <font name="Lucida Sans Typewriter"/>
           <foreground color="-4670273"/>
-          <text value="Manage Advisors"/>
+          <text value="Manage Accounts"/>
         </properties>
       </component>
       <component id="925fa" class="javax.swing.JButton" binding="manageBlankButton" default-binding="true">

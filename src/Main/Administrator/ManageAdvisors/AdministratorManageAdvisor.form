@@ -211,7 +211,7 @@
           <background color="-12763069"/>
           <enabled value="false"/>
           <font name="Lucida Sans Typewriter"/>
-          <text value="Enter Advisor ID"/>
+          <text value="Enter EmployeeID"/>
         </properties>
       </component>
       <component id="61de2" class="javax.swing.JTextField" binding="textField1" default-binding="true">

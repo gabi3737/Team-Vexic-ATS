@@ -65,8 +65,11 @@ public class MaintainCustomerCreateNew extends JFrame {
         saveButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                DatabaseConnector.InsertSQL("INSERT INTO Customer(customerID, customerType, eligibleForDiscount, address, name, discountRate, TravelAgencyID, AdvisoradvisorID,DiscountPlandiscountID) " +
-                        "VALUES = ?, ?, ?, ? ,? ,?, ?, ?, ?", customerID.getText(),  customerType.getSelectedItem().toString(), "yes", address.getText(), customerName.getText(), 0.12f, 123456, 250,1111);
+                DatabaseConnector.InsertSQL(
+                        "INSERT INTO Customer(customerID, customerType, eligibleForDiscount, address, name, discountRate, TravelAgencyID, AdvisoradvisorID, DiscountPlandiscountID) " +
+                                "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
+                        customerID.getText(), customerType.getSelectedItem().toString(), "yes", address.getText(), customerName.getText(), 0.12f, 123456, 250, 1111
+                );
             }
         });
 
