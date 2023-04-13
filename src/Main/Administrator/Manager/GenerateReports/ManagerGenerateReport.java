@@ -34,7 +34,7 @@ public class ManagerGenerateReport extends JFrame {
             /**
              * implementation of ActionEvent
              * when pressed user is taken back to main manager page
-             * @param e
+             * @param e event
              */
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -46,6 +46,13 @@ public class ManagerGenerateReport extends JFrame {
         });
 
         logoutButton.addActionListener(new ActionListener() {
+
+            /**
+             * implementation of ActionEvent
+             * it allows the user to close the system
+             * @param e event
+             */
+
             @Override
             public void actionPerformed(ActionEvent e) {
                 LoginWindow loginWindow = new LoginWindow();

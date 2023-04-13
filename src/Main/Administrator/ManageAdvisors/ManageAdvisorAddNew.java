@@ -60,6 +60,11 @@ public class ManageAdvisorAddNew extends JFrame {
         });
 
         saveButton.addActionListener(new ActionListener() {
+            /**
+             * Implementation of ActionEvent
+             * Database Connector & insert Table
+             * @param e the event to be processed
+             */
             @Override
             public void actionPerformed(ActionEvent e) {
                 int rand = 100 + (int) (Math.random() * 899) ;

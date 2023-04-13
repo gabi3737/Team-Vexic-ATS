@@ -14,6 +14,15 @@ public class DatabaseConnector {
     public static Connection conn;
     public static String tempUserID;
 
+    /**
+     * A static method for connecting to the mysql city server
+     * the server url specified
+     * @param username username
+     * @param password password
+     * @return connection when successful
+     * @return null when unsuccessful
+     */
+
     public static Connection connect(String username, String password) {
         String url = "jdbc:mysql://smcse-stuproj00.city.ac.uk:3306/in2018g28?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC";
 
@@ -27,6 +36,10 @@ public class DatabaseConnector {
         }
     }
 
+    /**
+     * A static QuerySql method used for Sql query
+     * @param query query
+     */
     public static void QuerySQL(String query){
         try {
             Statement newQuery = conn.createStatement();
@@ -100,6 +113,13 @@ public class DatabaseConnector {
 
      */
 
+    /**
+     * Inserting values into database table using static method
+     * @param query query insert
+     * @param parameters parameters
+     * @return new rows when successful
+     * @return -1 when unsuccessful
+     */
     public static int InsertSQL(String query, Object... parameters) {
         try {
             PreparedStatement update = conn.prepareStatement(query);
@@ -117,6 +137,13 @@ public class DatabaseConnector {
         }
     }
 
+    /**
+     * A static boolean method to match the query
+     * @param query match query
+     * @param parameters parameters
+     * @return the result when successful
+     * @return false when unsuccessful
+     */
     public static boolean QueryMatches(String query, Object... parameters){
         try (PreparedStatement preparedStatement = conn.prepareStatement(query)) {
             for (int i = 0; i < parameters.length; i++) {
@@ -131,6 +158,12 @@ public class DatabaseConnector {
         }
     }
 
+    /**
+     * A static method to get user designation from the database
+     * @param username get username
+     * @return designation
+     * @return null when any Error shows
+     */
     public static String getUserDesignation(String username) {
         String selectQuery = "SELECT e.designation " +
                 "FROM Login l " +

@@ -35,7 +35,7 @@ public class ManagerMain extends JFrame {
             /**
              * Implementation of ActionEvent
              * When button is pressed the Main.Administrator.Manager is taken to the Generate Report page
-             * @param e
+             * @param e event
              */
             @Override
             public void actionPerformed(ActionEvent e) {
