@@ -1,6 +1,7 @@
 package Main.Administrator.ManageAdvisors;
 
 import Main.Administrator.DatabaseConnector;
+import Main.Administrator.LoginWindow;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -47,6 +48,13 @@ public class ManageAdvisorAddNew extends JFrame {
         logoutButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                LoginWindow loginWindow = new LoginWindow();
+                loginWindow.setVisible(true);
+                loginWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                loginWindow.setSize(1000, 800);
+                loginWindow.setTitle("Vexic");
+                loginWindow.setContentPane(loginWindow.loginPanel);
+                loginWindow.setLocationRelativeTo(null);
                 dispose();
             }
         });
@@ -56,11 +64,29 @@ public class ManageAdvisorAddNew extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 int rand = 100 + (int) (Math.random() * 899) ;
                 DatabaseConnector.InsertSQL("INSERT INTO Employee (employeeID, name, designation, TravelAgencyID) VALUES (?, ?, ?, ?)",
-                        "EMP" + rand, textField4.getText(), "Travel Advisor", 123456);
-                DatabaseConnector.InsertSQL("INSERT INTO Advisor (advisorID, EmployeeemployeeID) VALUES (?, ?)",
-                        textField2.getText(), "EMP" + rand);
+                        "EMP" + rand, textField4.getText(), comboBox1.getSelectedItem().toString(), 123456);
+                if (comboBox1.getSelectedItem().toString().equals("Travel Advisor")){
+                    DatabaseConnector.InsertSQL("INSERT INTO Advisor (advisorID, EmployeeemployeeID) VALUES (?, ?)",
+                            textField2.getText(), "EMP" + rand);
+                }
+                else if (comboBox1.getSelectedItem().toString().equals("Manager"))
+                {
+                    DatabaseConnector.InsertSQL("INSERT INTO Manager (managerID, EmployeeemployeeID) VALUES (?, ?)",
+                            textField2.getText(), "EMP" + rand);
+                }
+                else if (comboBox1.getSelectedItem().toString().equals("Administrator"))
+                {
+                    DatabaseConnector.InsertSQL("INSERT INTO SystemAdministrator (systemAdministratorID, EmployeeemployeeID) VALUES (?, ?)",
+                            textField2.getText(), "EMP" + rand);
+                }
+                else if (comboBox1.getSelectedItem().toString().equals("Sales Agent"))
+                {
+
+                }
+
                 DatabaseConnector.InsertSQL("INSERT INTO Login (loginID, username, password, email, EmployeeemployeeID) VALUES (?, ?, ?, ?, ?)",
                         textField2.getText(), textField1.getText(), textField3.getText(), textField1.getText() + textField2.getText() + "@airvia.mail.uk", "EMP" + rand);
+                JOptionPane.showMessageDialog(null, "Employee added successfully.");
                 /*
                 DatabaseConnector.InsertSQL("INSERT INTO Advisor (advisorID, EmployeeemployeeID) \n" +
                         "VALUES (" + textField2.getText() + ", EMP" + rand + "); \n" );

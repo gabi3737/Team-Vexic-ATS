@@ -164,7 +164,8 @@
         </constraints>
         <properties>
           <model>
-            <item value="Travel Agent"/>
+            <item value="Travel Advisor"/>
+            <item value="Sales Agent"/>
             <item value="Administrator"/>
             <item value="Manager"/>
           </model>

@@ -1,5 +1,8 @@
 package Main.Administrator.ManageAdvisors;
 
+import Main.Administrator.DatabaseConnector;
+import Main.Administrator.LoginWindow;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -9,9 +12,13 @@ import java.awt.event.ActionListener;
  */
 public class ManageAdvisorEdit extends JFrame{
     private JPanel editPanel;
+    //ID
     private JTextField textField1;
+    //Password
     private JTextField textField2;
+    //Username
     private JTextField textField3;
+    //Designation (Travel Advisor, Sales Agent, Manager or Administrator)
     private JComboBox comboBox1;
     private JButton saveButton;
     private JButton backButton;
@@ -45,10 +52,36 @@ public class ManageAdvisorEdit extends JFrame{
         logoutButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //when this button is pressed the application is turned off.
+                LoginWindow loginWindow = new LoginWindow();
+                loginWindow.setVisible(true);
+                loginWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                loginWindow.setSize(1000, 800);
+                loginWindow.setTitle("Vexic");
+                loginWindow.setContentPane(loginWindow.loginPanel);
+                loginWindow.setLocationRelativeTo(null);
                 dispose();
             }
         });
 
+        saveButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String employeeID = DatabaseConnector.tempUserID;
+                String username = textField3.getText();
+                String password = textField2.getText();
+                String designation = (String) comboBox1.getSelectedItem();
+
+                if (!employeeID.isEmpty() && !username.isEmpty() && !password.isEmpty() && designation != null) {
+                    int updatedRows = DatabaseConnector.updateEmployee(employeeID, username, password, designation);
+                    if (updatedRows > 0) {
+                        JOptionPane.showMessageDialog(null, "Employee details updated successfully.");
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Error updating employee details.");
+                    }
+                } else {
+                    JOptionPane.showMessageDialog(null, "Please fill in all the fields.");
+                }
+            }
+        });
     }
 }

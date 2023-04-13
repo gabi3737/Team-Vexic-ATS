@@ -1,5 +1,6 @@
 package Main.Administrator.TravelAdvisor.MainPage;
 
+import Main.Administrator.LoginWindow;
 import Main.Administrator.TravelAdvisor.GenerateReports.TravelAdvisorGenerateReport;
 import Main.Administrator.TravelAdvisor.IssueRefund.TravelAdvisorIssueRefund;
 import Main.Administrator.TravelAdvisor.MaintainCustomers.TravelAdvisorMaintainCustomers;
@@ -72,6 +73,13 @@ public class TravelAdvisorMain extends JFrame {
         logoutButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                LoginWindow loginWindow = new LoginWindow();
+                loginWindow.setVisible(true);
+                loginWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                loginWindow.setSize(1000, 800);
+                loginWindow.setTitle("Vexic");
+                loginWindow.setContentPane(loginWindow.loginPanel);
+                loginWindow.setLocationRelativeTo(null);
                 dispose();
             }
         });

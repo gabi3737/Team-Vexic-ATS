@@ -1,10 +1,13 @@
 package Main.Administrator.ManageBlanks;
 
+import Main.Administrator.LoginWindow;
 import Main.Administrator.MainPage.AdministratorMain;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
+import static Main.Administrator.DatabaseConnector.displayBlankTable;
 
 /**
  * A class that holds the functionality of managing blanks, such as replacing, ordering or updating blanks
@@ -18,6 +21,7 @@ public class AdministratorManageBlanks extends JFrame {
     private JButton updateBlankStatusButton;
     private JButton logoutButton;
     private JButton backButton;
+    private JButton viewAllButton;
 
     /**
      * Displays the Manage Blanks page
@@ -75,8 +79,21 @@ public class AdministratorManageBlanks extends JFrame {
         logoutButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //when pressed the software closes
+                LoginWindow loginWindow = new LoginWindow();
+                loginWindow.setVisible(true);
+                loginWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                loginWindow.setSize(1000, 800);
+                loginWindow.setTitle("Vexic");
+                loginWindow.setContentPane(loginWindow.loginPanel);
+                loginWindow.setLocationRelativeTo(null);
                 dispose();
+            }
+        });
+
+        viewAllButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                displayBlankTable();
             }
         });
 

@@ -1,5 +1,6 @@
 package Main.Administrator.Manager.MainPage;
 
+import Main.Administrator.LoginWindow;
 import Main.Administrator.Manager.AssignBlank.ManagerAssignBlank;
 import Main.Administrator.Manager.GenerateReports.ManagerGenerateReport;
 import Main.Administrator.Manager.SetDiscountPlan.ManagerSetDiscountPlan;
@@ -64,13 +65,15 @@ public class ManagerMain extends JFrame {
         });
 
         logoutButton.addActionListener(new ActionListener() {
-            /**
-             * An ActionEvent added
-             * @param e the event to be processed
-             */
             @Override
             public void actionPerformed(ActionEvent e) {
-                //Closes the software when pressed
+                LoginWindow loginWindow = new LoginWindow();
+                loginWindow.setVisible(true);
+                loginWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                loginWindow.setSize(1000, 800);
+                loginWindow.setTitle("Vexic");
+                loginWindow.setContentPane(loginWindow.loginPanel);
+                loginWindow.setLocationRelativeTo(null);
                 dispose();
             }
         });

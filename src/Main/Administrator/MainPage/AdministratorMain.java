@@ -1,5 +1,6 @@
 package Main.Administrator.MainPage;
 
+import Main.Administrator.LoginWindow;
 import Main.Administrator.ManageAdvisors.AdministratorManageAdvisor;
 import Main.Administrator.ManageBlanks.AdministratorManageBlanks;
 import Main.Administrator.ManageCommission.AdministratorManageCommission;
@@ -80,6 +81,13 @@ public class AdministratorMain extends JFrame {
         logoutButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                LoginWindow loginWindow = new LoginWindow();
+                loginWindow.setVisible(true);
+                loginWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                loginWindow.setSize(1000, 800);
+                loginWindow.setTitle("Vexic");
+                loginWindow.setContentPane(loginWindow.loginPanel);
+                loginWindow.setLocationRelativeTo(null);
                 dispose();
             }
         });

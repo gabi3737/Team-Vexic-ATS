@@ -1,11 +1,15 @@
 package Main.Administrator.ManageAdvisors;
 
 import Main.Administrator.DatabaseConnector;
+import Main.Administrator.LoginWindow;
 import Main.Administrator.MainPage.AdministratorMain;
 
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
+import javax.xml.crypto.Data;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
 
 /**
  * A class to creat Graphical User Interface
@@ -23,6 +27,8 @@ public class AdministratorManageAdvisor extends JFrame {
     private JButton deleteButton;
     private JButton viewAllButton;
     private JButton saveButton;
+    private JTable resultsTable;
+    private JScrollPane tableScrollPane;
 
     /**
      * Displays the First Main.Administrator page
@@ -50,9 +56,28 @@ public class AdministratorManageAdvisor extends JFrame {
         editButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                if (DatabaseConnector.QueryMatches("SELECT e.EmployeeID FROM Employee e WHERE EmployeeID = ?", textField1.getText()))
+                {
+                    DatabaseConnector.tempUserID = textField1.getText();
+                }
                 ManageAdvisorEdit manageAdvisorEdit = new ManageAdvisorEdit();
                 manageAdvisorEdit.setVisible(true);
                 dispose();
+            }
+        });
+
+        deleteButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (DatabaseConnector.QueryMatches("SELECT e.EmployeeID FROM Employee e WHERE EmployeeID = ?", textField1.getText()))
+                {
+                    DatabaseConnector.tempUserID = textField1.getText();
+                    DatabaseConnector.QuerySQL("DELETE * FROM Employee WHERE EmployeeID = '" + DatabaseConnector.tempUserID + "'");
+                    JOptionPane.showMessageDialog(null, "Employee deleted successfully");
+                }
+                else {
+                    JOptionPane.showMessageDialog(null, "Employee ID does not match any in database");
+                }
             }
         });
 
@@ -74,6 +99,13 @@ public class AdministratorManageAdvisor extends JFrame {
         logoutButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                LoginWindow loginWindow = new LoginWindow();
+                loginWindow.setVisible(true);
+                loginWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                loginWindow.setSize(1000, 800);
+                loginWindow.setTitle("Vexic");
+                loginWindow.setContentPane(loginWindow.loginPanel);
+                loginWindow.setLocationRelativeTo(null);
                 dispose();
             }
         });
@@ -81,7 +113,11 @@ public class AdministratorManageAdvisor extends JFrame {
         viewAllButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                DatabaseConnector.QuerySQL("SELECT * FROM Advisor");
+                DefaultTableModel tableModel = DatabaseConnector.QuerySQLTable("SELECT * FROM Employee e " +
+                        "JOIN Advisor a ON e.employeeID = a.EmployeeemployeeID");
+                if (tableModel != null) {
+                    resultsTable.setModel(tableModel);
+                }
             }
         });
     }

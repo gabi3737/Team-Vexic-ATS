@@ -1,11 +1,11 @@
+package Main.Administrator;
+
 import Main.Administrator.MainPage.AdministratorMain;
 import Main.Administrator.Manager.MainPage.ManagerMain;
 import Main.Administrator.TravelAdvisor.MainPage.TravelAdvisorMain;
-import Main.Administrator.*;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
-import javax.xml.crypto.Data;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -16,7 +16,7 @@ import java.awt.event.ActionListener;
  */
 public class LoginWindow extends JFrame {
     private JButton ExitButton;
-    private JPanel loginPanel;
+    public JPanel loginPanel;
     private JTextField user;
     private JTextField pass;
     private JButton LoginButton;
@@ -80,6 +80,7 @@ public class LoginWindow extends JFrame {
                 }
                 else
                 {
+                    JOptionPane.showMessageDialog(null, "Error logging in. Please check your credentials.");
                     System.out.println("Error logging in");
                 }
             }

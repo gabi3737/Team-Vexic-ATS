@@ -1,5 +1,6 @@
 package Main.Administrator.ManageCommission;
 
+import Main.Administrator.LoginWindow;
 import Main.Administrator.MainPage.AdministratorMain;
 
 import javax.swing.*;
@@ -61,7 +62,13 @@ public class AdministratorManageCommission extends JFrame {
         logoutButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //when pressed the software closes
+                LoginWindow loginWindow = new LoginWindow();
+                loginWindow.setVisible(true);
+                loginWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                loginWindow.setSize(1000, 800);
+                loginWindow.setTitle("Vexic");
+                loginWindow.setContentPane(loginWindow.loginPanel);
+                loginWindow.setLocationRelativeTo(null);
                 dispose();
             }
         });

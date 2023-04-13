@@ -1,5 +1,6 @@
 package Main.Administrator.ManageDatabase;
 
+import Main.Administrator.LoginWindow;
 import Main.Administrator.MainPage.AdministratorMain;
 
 import javax.swing.*;
@@ -46,13 +47,15 @@ public class AdministratorManageDatabase extends JFrame {
         });
 
         logoutButton.addActionListener(new ActionListener() {
-            /**
-             * Implementation of ActionEvent where the user will be logged out and exited here if the button is pressed.
-             * @param e
-             */
             @Override
             public void actionPerformed(ActionEvent e) {
-                //The user will be logged out and exited here if the button is pressed.
+                LoginWindow loginWindow = new LoginWindow();
+                loginWindow.setVisible(true);
+                loginWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                loginWindow.setSize(1000, 800);
+                loginWindow.setTitle("Vexic");
+                loginWindow.setContentPane(loginWindow.loginPanel);
+                loginWindow.setLocationRelativeTo(null);
                 dispose();
             }
         });
