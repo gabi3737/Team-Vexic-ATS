@@ -13,6 +13,9 @@ import java.awt.event.ActionListener;
 /**
  * A class to creat Graphical User Interface of Login Page
  * It holds the functionality of the login window displayed to users
+ * @author Team Vexic
+ * @version 1.5
+ * @since 1.0
  */
 public class LoginWindow extends JFrame {
     private JButton ExitButton;
