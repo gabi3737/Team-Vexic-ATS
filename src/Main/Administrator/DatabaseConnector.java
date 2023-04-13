@@ -313,4 +313,71 @@ public class DatabaseConnector {
         frame.pack();
         frame.setVisible(true);
     }
+
+    public static void assignBlanks(long startBlankID, long endBlankID, String advisorName) {
+        String updateQuery = "UPDATE Blank SET recievedByFromAirline = ? WHERE blankID = ?";
+
+        try (PreparedStatement preparedStatement = conn.prepareStatement(updateQuery);){
+            for (long i = startBlankID; i <= endBlankID; i++) {
+
+                preparedStatement.setString(1, advisorName);
+                preparedStatement.setLong(2, (int)i);
+
+                preparedStatement.addBatch();
+            }
+            preparedStatement.executeBatch();
+        } catch (SQLException e) {
+            System.out.println("Error updating blanks: " + e.getMessage());
+        }
+    }
+
+    public static DefaultTableModel buildTableModel(ResultSet resultSet) throws SQLException {
+        ResultSetMetaData metaData = resultSet.getMetaData();
+
+        Vector<String> columnNames = new Vector<String>();
+        int columnCount = metaData.getColumnCount();
+        for (int column = 1; column <= columnCount; column++) {
+            columnNames.add(metaData.getColumnName(column));
+        }
+
+        Vector<Vector<Object>> data = new Vector<Vector<Object>>();
+        while (resultSet.next()) {
+            Vector<Object> vector = new Vector<Object>();
+            for (int columnIndex = 1; columnIndex <= columnCount; columnIndex++) {
+                vector.add(resultSet.getObject(columnIndex));
+            }
+            data.add(vector);
+        }
+
+        return new DefaultTableModel(data, columnNames);
+    }
+
+    public static void displayAssignedBlanks() {
+        String query = "SELECT b.recievedByFromAirline as Advisor, " +
+                "MIN(b.blankNum) as MinBlankNum, " +
+                "MAX(b.blankNum) as MaxBlankNum " +
+                "FROM Blank b " +
+                "WHERE b.recievedByFromAirline IS NOT NULL " +
+                "GROUP BY b.recievedByFromAirline, b.blankType " +
+                "ORDER BY b.recievedByFromAirline, b.blankType";
+
+
+        try {
+            Statement stmt = DatabaseConnector.conn.createStatement();
+            ResultSet resultSet = stmt.executeQuery(query);
+            JTable table = new JTable(buildTableModel(resultSet));
+
+            // Create a new JFrame and add the table inside a JScrollPane
+            JFrame frame = new JFrame("Assigned Blanks");
+            frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+            frame.setSize(800, 600);
+            JScrollPane scrollPane = new JScrollPane(table);
+            frame.add(scrollPane);
+            frame.setLocationRelativeTo(null);
+            frame.setVisible(true);
+
+        } catch (SQLException e) {
+            System.out.println("Error displaying assigned blanks: " + e.getMessage());
+        }
+    }
 }

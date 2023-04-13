@@ -61,10 +61,10 @@
         </constraints>
         <properties>
           <font name="Lucida Sans Typewriter"/>
-          <text value="Advisor ID"/>
+          <text value="Advisor Name"/>
         </properties>
       </component>
-      <component id="effd6" class="javax.swing.JTextField" binding="textField1" default-binding="true">
+      <component id="effd6" class="javax.swing.JTextField" binding="advisorName">
         <constraints>
           <grid row="5" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -92,7 +92,7 @@
           <text value="Quantity"/>
         </properties>
       </component>
-      <component id="2eee8" class="javax.swing.JTextField" binding="textField2" default-binding="true">
+      <component id="2eee8" class="javax.swing.JTextField" binding="blankQnt">
         <constraints>
           <grid row="8" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -117,20 +117,7 @@
         </constraints>
         <properties>
           <font name="Lucida Sans Typewriter"/>
-          <text value="Select Blank"/>
-        </properties>
-      </component>
-      <component id="7e656" class="javax.swing.JComboBox" binding="comboBox1" default-binding="true">
-        <constraints>
-          <grid row="11" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <model>
-            <item value="Blank 1"/>
-            <item value="Blank 2"/>
-            <item value="Blank 3"/>
-            <item value="Blank 4"/>
-          </model>
+          <text value="Starting blank"/>
         </properties>
       </component>
       <grid id="8c26d" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
@@ -218,6 +205,22 @@
           <grid row="13" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
       </hspacer>
+      <component id="16054" class="javax.swing.JTextField" binding="startBlank">
+        <constraints>
+          <grid row="11" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="a4172" class="javax.swing.JButton" binding="viewAllAssignedBlanksButton" default-binding="true">
+        <constraints>
+          <grid row="13" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="View All Assigned Blanks"/>
+        </properties>
+      </component>
     </children>
   </grid>
 </form>

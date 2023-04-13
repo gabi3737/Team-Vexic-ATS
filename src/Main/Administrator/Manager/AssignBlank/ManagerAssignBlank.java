@@ -1,9 +1,11 @@
 package Main.Administrator.Manager.AssignBlank;
 
+import Main.Administrator.DatabaseConnector;
 import Main.Administrator.LoginWindow;
 import Main.Administrator.Manager.MainPage.ManagerMain;
 
 import javax.swing.*;
+import javax.xml.crypto.Data;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -14,12 +16,13 @@ import java.awt.event.ActionListener;
 public class ManagerAssignBlank extends JFrame {
 
     private JPanel managerassignblankPanel;
-    private JTextField textField1;
-    private JTextField textField2;
-    private JComboBox comboBox1;
+    private JTextField advisorName;
+    private JTextField blankQnt;
     private JButton logoutButton;
     private JButton saveButton;
     private JButton backButton;
+    private JTextField startBlank;
+    private JButton viewAllAssignedBlanksButton;
 
     /**
      * Displays the Assign Blank Page
@@ -60,5 +63,21 @@ public class ManagerAssignBlank extends JFrame {
             }
         });
 
+        saveButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                long firstBlank = Long.parseLong(startBlank.getText());
+                long lastBlank = firstBlank + Long.parseLong(blankQnt.getText()) - 1;
+                System.out.println(firstBlank + "," + lastBlank);
+                DatabaseConnector.assignBlanks(firstBlank,lastBlank,advisorName.getText());
+            }
+        });
+
+        viewAllAssignedBlanksButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                DatabaseConnector.displayAssignedBlanks();
+            }
+        });
     }
 }
