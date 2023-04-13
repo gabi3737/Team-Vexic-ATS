@@ -10,8 +10,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * A class to creat Graphical User Interface
+ * A class to creat Graphical User Interface for Main Administrator page
  * It holds all the information of the Main.Administrator
+ * @author Team Vexic
+ * @version 1.5
+ * @since 1.0
  */
 public class AdministratorMain extends JFrame {
 
@@ -25,6 +28,7 @@ public class AdministratorMain extends JFrame {
 
     /**
      * Displays the First Main.Administrator page
+     * window size width and height specified
      */
     public AdministratorMain() {
         //Displays the First Main.Administrator page
@@ -49,6 +53,10 @@ public class AdministratorMain extends JFrame {
         });
 
         manageAdvisorsButton.addActionListener(new ActionListener() {
+            /**
+             * An Override method to display ManageAdvisors page when pressed
+             * @param e the event to be processed
+             */
             @Override
             public void actionPerformed(ActionEvent e) {
                 //Displays ManageAdvisors page when pressed

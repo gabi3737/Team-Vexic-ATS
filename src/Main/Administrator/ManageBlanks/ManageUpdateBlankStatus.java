@@ -31,7 +31,7 @@ public class ManageUpdateBlankStatus extends JFrame {
         backButton.addActionListener(new ActionListener() {
             /**
              * Implementation of ActionEvent to allow the user to go back to the Main.Administrator manage blank page
-             * @param e
+             * @param e event
              */
             @Override
             public void actionPerformed(ActionEvent e) {

@@ -26,6 +26,8 @@ public class AdministratorManageAdvisor extends JFrame {
 
     /**
      * Displays the First Main.Administrator page
+     * Widnow size height and width specified
+     * Set title "Manage Advisors"
      */
     public AdministratorManageAdvisor() {
         //Displays the First Main.Administrator page
@@ -79,6 +81,11 @@ public class AdministratorManageAdvisor extends JFrame {
         });
 
         viewAllButton.addActionListener(new ActionListener() {
+            /**
+             * Implementation of ActionEvent
+             * The CONNECT statement connects the system to the database server
+             * @param e the event to be processed
+             */
             @Override
             public void actionPerformed(ActionEvent e) {
                 DatabaseConnector.QuerySQL("SELECT * FROM Advisor");

@@ -27,6 +27,10 @@ public class ManageCommissionAdd extends JFrame {
         this.setLocationRelativeTo(null);
 
         backButton.addActionListener(new ActionListener() {
+            /**
+             * An override method to allow the user to go back to Main.Administrator manage commissions page
+             * @param e the event to be processed
+             */
             @Override
             public void actionPerformed(ActionEvent e) {
                 //Allows the user to go back to Main.Administrator manage commissions page
