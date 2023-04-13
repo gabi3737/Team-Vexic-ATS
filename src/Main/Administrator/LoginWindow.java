@@ -92,6 +92,7 @@ public class LoginWindow extends JFrame {
             }
         });
 
+        /*
         administratorButtonTestButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -118,6 +119,8 @@ public class LoginWindow extends JFrame {
                 dispose();
             }
         });
+
+         */
 
         ExitButton.addActionListener(new ActionListener() {
             @Override

@@ -66,39 +66,6 @@
             </constraints>
             <properties/>
           </component>
-          <component id="a6b48" class="javax.swing.JButton" binding="administratorButtonTestButton" default-binding="true">
-            <constraints>
-              <grid row="14" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <background color="-12763069"/>
-              <font name="Lucida Sans Typewriter"/>
-              <foreground color="-4670273"/>
-              <text value="administratorButtonTest"/>
-            </properties>
-          </component>
-          <component id="63131" class="javax.swing.JButton" binding="managerButtonTestButton" default-binding="true">
-            <constraints>
-              <grid row="15" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <background color="-12763069"/>
-              <font name="Lucida Sans Typewriter"/>
-              <foreground color="-4670273"/>
-              <text value="managerButtonTest"/>
-            </properties>
-          </component>
-          <component id="9710f" class="javax.swing.JButton" binding="travelAdvisorButtonTestButton" default-binding="true">
-            <constraints>
-              <grid row="16" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <background color="-12763069"/>
-              <font name="Lucida Sans Typewriter"/>
-              <foreground color="-4670273"/>
-              <text value="TravelAdvisorButtonTest"/>
-            </properties>
-          </component>
           <vspacer id="40a69">
             <constraints>
               <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
