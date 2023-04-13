@@ -70,6 +70,13 @@ public class DatabaseConnector {
 
      */
 
+    /**
+     * Inserting values into database table using static method
+     * @param query query insert
+     * @param parameters parameters
+     * @return new rows when successful
+     * @return -1 when unsuccessful
+     */
     public static int InsertSQL(String query, Object... parameters) {
         try {
             PreparedStatement update = conn.prepareStatement(query);
@@ -87,6 +94,13 @@ public class DatabaseConnector {
         }
     }
 
+    /**
+     * A static boolean method to match the query
+     * @param query match query
+     * @param parameters parameters
+     * @return the result when successful
+     * @return false when unsuccessful
+     */
     public static boolean QueryMatches(String query, Object... parameters){
         try (PreparedStatement preparedStatement = conn.prepareStatement(query)) {
             for (int i = 0; i < parameters.length; i++) {
@@ -101,6 +115,12 @@ public class DatabaseConnector {
         }
     }
 
+    /**
+     * A static method to get user designation from the database
+     * @param username get username
+     * @return designation
+     * @return null when any Error shows
+     */
     public static String getUserDesignation(String username) {
         String selectQuery = "SELECT e.designation " +
                 "FROM Login l " +
