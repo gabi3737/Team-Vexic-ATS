@@ -1,5 +1,6 @@
 package Main.Administrator.TravelAdvisor.MaintainCustomers;
 
+import Main.Administrator.DatabaseConnector;
 import Main.Administrator.LoginWindow;
 
 import javax.swing.*;
@@ -12,11 +13,11 @@ import java.awt.event.ActionListener;
 public class MaintainCustomerCreateNew extends JFrame {
 
     private JPanel maintaincustomercreatenewPanel;
-    private JTextField textField1;
-    private JTextField textField2;
-    private JTextField textField3;
-    private JComboBox comboBox1;
-    private JComboBox comboBox2;
+    private JTextField customerID;
+    private JTextField customerName;
+    private JTextField address;
+    private JComboBox customerType;
+    private JComboBox DiscountPlan;
     private JButton backButton;
     private JButton logoutButton;
     private JButton saveButton;
@@ -60,5 +61,15 @@ public class MaintainCustomerCreateNew extends JFrame {
                 dispose();
             }
         });
+
+        saveButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                DatabaseConnector.InsertSQL("INSERT INTO Customer(customerID, customerType, eligibleForDiscount, address, name, discountRate, TravelAgencyID, AdvisoradvisorID,DiscountPlandiscountID) " +
+                        "VALUES = ?, ?, ?, ? ,? ,?, ?, ?, ?", customerID.getText(),  customerType.getSelectedItem().toString(), "yes", address.getText(), customerName.getText(), 0.12f, 123456, 250,1111);
+            }
+        });
+
+
     }
 }
